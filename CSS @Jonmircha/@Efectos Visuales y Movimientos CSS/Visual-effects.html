@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" id="#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Efectos Visuales CSS</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="Css/Visual-effects.css" />
+  </head>
+  <body class="dark-mode">
+    <a href="##" class="arrow-container">
+      <i class="bi arrow bi-arrow-up"></i>
+    </a>
+    <header>
+      <h1>Layaout</h1>
+      <div class="buttons">
+        <a href="https://github.com/JHome-1404?tab=repositories" target="_blank">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="/@Efectos Visuales y Movimientos CSS/Index-3.html">
+          <i class="bi bi-box-arrow-left arrow-left"></i>
+        </a>
+      </div>
+    </header>
+    <div class="course">
+      <nav>
+        <h2>Temario</h2>
+        <a href="#sombras">Sombras</a>
+        <a href="#degradados">Degradados</a>
+        <a href="#pattern">patrones con Degradados</a>
+        <a href="#degradados">patrones con Degradados</a>
+        <a href="#graphics">Graficas Con Degradados</a>
+        <a href="#filter">Filtros</a>
+        <a href="#blend-mode">Modos de Mezcla</a>
+      </nav>
+      <div class="course-container">
+        <h1>Efectos Visuales CSS</h1>
+        <article id="sombras">
+          <h2>Sombras</h2>
+          <p>
+            Cuando no se especifica la sombre toma el color por defecto y lo aplica a la sombra
+            <br />
+            5 valores: mov-x, mov-y, blur-radius spread-blur, color, inset-outside lore
+          </p>
+          <div class="box shadows">Sombra</div>
+          <p>
+            Se puden colocar muchas sombras en un mismo elemento solo ampliando y separando por ","
+            el box-shadow
+          </p>
+          <div class="box shadows-multiple">Sombra</div>
+          <p>
+            Box shadow aplica sombra pero siguiendo el modelo de caja, filter: drop-shadow aplica
+            sombra sin seguir este modelo <br />
+            En los filtros no se puede colocar varias sombras
+          </p>
+          <div class="box drop-shadow">
+            <img
+              src="https://mystickermania.com/cdn/stickers/anime/chainsaw-man-pochita-bread-512x512.png"
+              alt="Pochita.png"
+            />
+          </div>
+          <pre>
+          <code>
+            .box {
+              border: 5px solid #fff;
+              width: 200px;
+              height: 200px;
+              margin-left: auto;
+              margin-right: auto;
+              margin-bottom: 3rem;
+              padding: 2rem;
+              text-align: center;
+              font-size: 2rem;
+            }
+            
+            .shadows {
+              /* box-shadow: mov-x, mov-y, blur-radius spread-blur, color, inset-outside; */
+              color: coral;
+              box-shadow: 1rem 1rem 1rem 1rem;
+              box-shadow: 1rem 1rem 1rem 1rem blueviolet;
+              box-shadow: 1rem 1rem 1rem 1rem #fff5 inset;
+              box-shadow: 1rem 1rem 1rem 0.5rem #fff5;
+              /* text-shadow: mov-x, mov-y, blur-radius color; */
+              text-shadow: -1rem -1rem 0.2rem pink;
+            }
+            
+            .shadows-multiple {
+              box-shadow: 1rem 1rem 1rem 1rem blueviolet, 1rem 1rem 1rem 1rem rgba(255, 0, 0, 0.5) inset,
+                -1rem -1rem 0rem pink;
+              text-shadow: -1rem -1rem 0.2rem orange;
+            }
+            
+            .drop-shadow {
+              /* filter: drop-shadow(1rem 1rem 0.2rem red); */
+              width: 400px;
+              height: auto;
+            }
+            
+            .drop-shadow img {
+              /* filter: drop-shadow(mov-x mov-y blur-radius color ); */
+              max-width: 100%;
+              height: auto;
+              box-shadow: 1rem 1rem 1rem 1rem lightcoral;
+              filter: drop-shadow(1rem 1rem 1rem orange);
+              /* No aplica */
+              /* filter: drop-shadow(1rem 1rem 1rem orangered), drop-shadow(1rem 1rem 1rem lightcoral); */
+            }            
+          </code>
+        </pre>
+        </article>
+        <hr />
+        <article id="degradados">
+          <h2>Degradados</h2>
+          <h3>Lineal</h3>
+          <p>
+            Podemos cambiar el grado con lineal-gradient(0deg), "deg para grados" para cambiar la
+            posicion de inicio del degradado <br />
+            Se puede ajustar con % la cantidad de espacio degrado que toma un colocar <br />
+            Si se coloca seguidos no se hace el degradado <br />
+            Si la sintaxis esta mal escrita, se toma los valores anteriores escritos o no toma
+            ninguno
+          </p>
+          <div class="box lineal-gradient"></div>
+          <pre>
+          <code>
+            .lineal-gradient {
+              background-image: linear-gradient(lightblue, blue, darkblue);
+              background-image: linear-gradient(0deg, lightblue, blue, darkblue);
+              background-image: linear-gradient(20deg, lightblue, blue, darkblue);
+              background-image: linear-gradient(180deg, lightblue, blue, darkblue);
+              background-image: linear-gradient(to right, lightblue, blue, darkblue);
+              background-image: linear-gradient(to top, lightblue, blue, darkblue);
+              background-image: linear-gradient(to bottom, lightblue, blue, darkblue);
+              background-image: linear-gradient(to top left, lightblue, blue, darkblue);
+              background-image: linear-gradient(90deg, lightblue 30%, blue, darkblue, red 70%);
+              background-image: linear-gradient(90deg, blue 33%, white 34% 67%, red 68%);
+            }            
+          </code>
+        </pre>
+          <h3>Radial</h3>
+          <p>
+            Son degradados de forma circular, poniendo valores en su radio para formar degradados
+            <br />
+            Para valores circulares 1 valor , para elipticos 2 valores
+          </p>
+          <div class="box radial-gradient"></div>
+          <pre>
+          <code>
+            .radial-gradient {
+              /* background-image: radial-gradient(tamaño, blue Ocupacion %, white, red); */
+              background-image: radial-gradient(blue, white, red);
+              background-image: radial-gradient(blue 33%, white 34% 50%, red 51%);
+              background-image: radial-gradient(2rem, blue, white, red);
+              background-image: radial-gradient(circle 4rem, blue 30%, white 80%, red);
+              background-image: radial-gradient(circle 100px, blue 30%, white 60%, red 90%);
+              background-image: radial-gradient(circle 100px at top, blue 30%, white 60%, red 90%);
+              background-image: radial-gradient(circle 100px at bottom, blue 30%, white 60%, red 90%);
+              background-image: radial-gradient(circle 100px at top left, blue 30%, white 60%, red 90%);
+              background-image: radial-gradient(circle 100px at bottom left, blue 30%, white 32%, red 33%);
+              background-image: radial-gradient(circle 285px at bottom left, blue 40%, white 41% 67%, red 68%);
+              background-image: radial-gradient(ellipse 50px 100px, blue 40%, white 41% 67%, red 68%);
+              background-image: radial-gradient(circle 100px, red 50%, white 51%);
+            }
+          </code>
+        </pre>
+          <h3>Conico</h3>
+          <p>Degradados de 3 colores en forma de triangulo</p>
+          <div class="box conic-gradient"></div>
+          <pre>
+          <code>
+            .conic-gradient {
+              background-image: conic-gradient(blue, white, red);
+              background-image: conic-gradient(blue 0 50%, white 60%, red 80%);
+              background-image: conic-gradient(blue 0deg 90deg, white 120deg, red 120deg 240deg);
+              background-image: conic-gradient(blue 0deg 90deg, white 120deg 240deg, red 270deg);
+              background-image: conic-gradient(from 90deg, blue 0deg 90deg, white 120deg 240deg, red 270deg);
+              background-image: conic-gradient(from 180deg, blue 0deg 90deg, white 120deg 240deg, red 270deg);
+              background-image: conic-gradient(from 90deg, red 0deg 120deg, blue 120deg 240deg, white 240deg);
+            }
+          </code>
+        </pre>
+        </article>
+        <hr />
+        <article id="pattern">
+          <h2>Patrones con Degradados</h2>
+          <div class="box repeat-gradient-lineal"></div>
+          <pre>
+          <code>
+            .repeat-gradient-lineal {
+              background-image: repeating-linear-gradient(90deg, blue 0 10px, white 10px 20px, red 20px 30px);
+            }
+          </code>
+        </pre>
+          <div class="box repeat-gradient-radial"></div>
+          <pre>
+          <code>
+            .repeat-gradient-radial {
+              background-image: repeating-radial-gradient(circle 4rem, red 0 10px, white 10px 20px);
+            }            
+          </code>
+        </pre>
+          <div class="box repeat-gradient-conic"></div>
+          <pre>
+          <code>
+            .repeat-gradient-conic {
+              background-image: repeating-conic-gradient(red 0 8%, blue 8% 16%, white 16% 24%);
+            }
+          </code>
+        </pre>
+        </article>
+        <hr />
+        <article id="graphics">
+          <h2>Graficas Con Degradados</h2>
+          <p>
+            Los atributos, linear-gradient, radial-gradient, conic-gradient se pueden repetir en un
+            mismo elemento para mezclar sus caracteristicas <br />
+            igualmente se puede mezclar estos atributos con sus repeating-conic-gradient,
+            repeat-gradient-lineal, repeat-gradient-radial
+          </p>
+          <div class="box chart-gradient"></div>
+          <pre>
+          <code>
+            .chart-gradient {
+            background-image: conic-gradient(lightblue 0 50%, lightcoral 50% 80%, lightyellow 80%);
+            border-radius: 50%;
+          }
+        </code>
+        </pre>
+          <div class="box donut-gradient"></div>
+          <pre>
+          <code>
+            .donut-gradient {
+              background-image: radial-gradient(white 40%, black 41%, transparent 43%),
+                conic-gradient(lightblue 0 50%, lightcoral 50% 80%, lightyellow 80%);
+              border-radius: 50%;
+            }
+          </code>
+        </pre>
+        </article>
+        <hr />
+        <article id="filter">
+          <h2>Filtros</h2>
+          <p>
+            Los filtros se aprecian mejor a las imagenes en html, no a los textos o imagenes de
+            fondo
+            <br />
+            Para mezclar filtros se ponen en la misma propiedad pero no se separa por coma
+          </p>
+          <article class="card">
+            <img
+              class="filter"
+              src="https://i.blogs.es/0ecab2/chainsaw-man/1366_2000.jpeg"
+              alt="chainsaw-man.png"
+            />
+          </article>
+          <pre>
+          <code>
+            .card {
+              border: 5px solid #fff;
+              margin-left: auto;
+              margin-right: auto;
+              margin-bottom: 3rem;
+              width: 600px;
+              height: 400px;
+            }
+            
+            .card img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              margin: 0%;
+              /* --- */
+              filter: blur(1rem);
+              filter: blur(0.25rem);
+              /* De 0 a 1 */
+              filter: brightness(1);
+              filter: brightness(0.75);
+              filter: brightness(0.25);
+              filter: brightness(0);
+              filter: brightness(2);
+              /* De 0 a 1 */
+              filter: contrast(0);
+              filter: contrast(0.25);
+              filter: contrast(1);
+              filter: contrast(1.15);
+              filter: contrast(2);
+              /* De 0 a 1 */
+              filter: grayscale(0);
+              filter: grayscale(0.5);
+              filter: grayscale(0.75);
+              filter: grayscale(1);
+              /* De 0 a 1 */
+              filter: sepia(0);
+              filter: sepia(0.5);
+              filter: sepia(1);
+              /* Combinacion */
+              filter: brightness(2) blur(0.2rem) contrast(1.15);
+              /* De 0 a 330 grados */
+              filter: hue-rotate(0deg);
+              filter: hue-rotate(30deg);
+              filter: hue-rotate(60deg);
+              filter: hue-rotate(90deg);
+              filter: hue-rotate(120deg);
+              filter: hue-rotate(150deg);
+              filter: hue-rotate(180deg);
+              filter: hue-rotate(210deg);
+              filter: hue-rotate(300deg);
+              filter: hue-rotate(330deg);
+              /* De 0 a 1 */
+              filter: invert(0);
+              filter: invert(0.5);
+              filter: invert(2);
+              /* De 1 a 0 */
+              filter: opacity(0);
+              filter: opacity(0.5);
+              filter: opacity(1);
+              /* De 0 a 1 */
+              filter: saturate(0);
+              filter: saturate(0.5);
+              filter: saturate(1);
+              filter: saturate(2);
+              filter: saturate(4);
+            }
+          </code>
+        </pre>
+          <hr />
+          <h3>Filtros Multiples</h3>
+          <article class="card">
+            <img
+              class="multiple-filters"
+              src="https://i.blogs.es/0ecab2/chainsaw-man/1366_2000.jpeg"
+              alt="chainsaw-man.png"
+            />
+          </article>
+          <pre>
+          <code>
+            .multiple-filters {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              margin: 0%;
+              /* --- */
+              filter: blur(0.1rem) hue-rotate(280deg) opacity(1.75) saturate(1.5);
+            }
+          </code>
+        </pre>
+          <h3>Filtros a Fondos</h3>
+          <p>backdrop-filter modifica el fondo, lo cual puede intervenir sobre fondos sobre este</p>
+          <article class="card relative">
+            <img
+              class="background-filters"
+              src="https://i.blogs.es/0ecab2/chainsaw-man/1366_2000.jpeg"
+              alt="chainsaw-man.png"
+            />
+            <div class="backdrop-filter">
+              <h4>Chainsaw Man</h4>
+            </div>
+          </article>
+          <pre>
+          <code>
+            .relative {
+              position: relative;
+            }
+            
+            .background-filters {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              margin: 0%;
+            }
+          
+          .backdrop-filter {
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          .backdrop-filter h4 {
+            background-color: rgba(255, 166, 0, 0.3);
+            color: orange;
+            font-size: 2.5rem;
+            padding: 4rem;
+            border-radius: 2rem;
+            backdrop-filter: grayscale(1);
+            backdrop-filter: saturate(2);
+            backdrop-filter: hue-rotate(180deg);
+            backdrop-filter: blur(0.2rem);
+          }
+        </code>
+        </pre>
+          <hr />
+          <h2>Modo Dark/Light con Filtros</h2>
+          <p>
+            Aplica clase "dark-mode" al body o al html <br />
+            No aplicar aplicar aconsejable, ya que modifica todo incluso las fotos <br />
+            Inversion light + Inversion light = Inversion Dark
+          </p>
+          <pre>
+          <code>
+            * .dark-mode {
+              background-color: #000;
+              color: #fff;
+              filter: invert(0);
+            }
+            
+            .dark-mode img {
+              filter: invert(0);
+            } */            
+          </code>
+        </pre>
+        </article>
+        <hr />
+        <article id="blend-mode">
+          <h2>Modos de Mezcla</h2>
+          <p>
+            Funcionamiento en capas igual que Ibistpaint X, mezcla de colores <br />
+            Aplicar a las imganes NO al contenedor
+          </p>
+          <article class="card relative blend-mode">
+            <img
+              class="imagen"
+              src="https://img.freepik.com/vector-gratis/plantilla-fondo-estrellas-brillantes-cielo-oscuro_1308-40081.jpg"
+              alt="Stars.png"
+            />
+            <img
+              class="imagen absolute"
+              src="https://chpic.su/_data/stickers/g/Genshin_Impact_Official_Chibi/Genshin_Impact_Official_Chibi_017.webp"
+              alt="keching.png"
+            />
+          </article>
+          <pre>
+          <code>
+            .imagen {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              margin: 0%;
+            }
+            
+            .absolute {
+              position: absolute;
+              top: 0%;
+              left: 0%;
+            }
+            
+            .blend-mode img {
+              /* Defecto */
+              mix-blend-mode: normal;
+              mix-blend-mode: color;
+              mix-blend-mode: color-burn;
+              mix-blend-mode: color-dodge;
+              mix-blend-mode: darken;
+              mix-blend-mode: screen;
+              mix-blend-mode: multiply;
+              mix-blend-mode: saturation;
+              mix-blend-mode: luminosity;
+              mix-blend-mode: hue;
+              mix-blend-mode: exclusion;
+              mix-blend-mode: screen;
+            }
+          </code>
+        </pre>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>

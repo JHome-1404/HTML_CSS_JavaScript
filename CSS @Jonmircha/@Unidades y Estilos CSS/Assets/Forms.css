@@ -1,0 +1,112 @@
+:root {
+  --color-1: #073b4c;
+  --color-2: #ffd166;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--color-1);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-2);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-1);
+}
+
+/*--- Button ---*/
+
+i {
+  font-size: 60px;
+  position: fixed;
+  top: 90%;
+  right: 2%;
+  scroll-behavior: smooth;
+}
+
+/*--- --- Star of the Code --- --- */
+/*--- --- Star of the Code --- --- */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  /* Shortand */
+  gap: 10px;
+  padding: 20px;
+}
+
+.contact-form {
+  --form-text-color: #464949;
+  --form-placeholder-color: #888888;
+  --form-succes-color: #4caf50;
+  --form-error-color: #f44336;
+  --form-bg-color: #ddd;
+  --form-border-color: #222;
+  background-color: var(--form-bg-color);
+  border: medium solid var(--form-border-color);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form > * {
+  font-family: "Franklin Gothic Medium";
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--form-text-color);
+  caret-shape: block;
+  caret-color: var(--form-border-color);
+}
+
+.contact-form > *::placeholder {
+  color: var(--form-placeholder-color);
+}
+
+.contact-form input[type="submit"] {
+  /* margin-bottom: 0px; */
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--form-border-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.contact-form > *[required]:empty {
+  border: thin solid var(--form-border-color);
+}
+
+.contact-form > *[required]:invalid {
+  border: thin solid var(--form-error-color);
+}
+
+.contact-form > *[required]:valid {
+  border: thin solid var(--form-succes-color);
+}
+
+.contact-form input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.contact-form textarea {
+  resize: none;
+  overflow-y: scroll;
+}

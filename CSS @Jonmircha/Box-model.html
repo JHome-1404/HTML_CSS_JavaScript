@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modelo de caja CSS</title>
+    <link rel="stylesheet" href="Assets/Box-model.css" />
+  </head>
+  <body>
+    <h1>Modelo de Caja CSS</h1>
+    <p><a href="Index.html">👈 Volver al Index</a></p>
+    <hr>
+    <!-- --- Temario --- -->
+    <article id="temario-box">
+      <h2>Temario Box-model</h2>
+      <ul>
+        <li><a href="Box-model.html#modelo-de-caja">Modelo de Caja(Box Model)</a></li>
+        <li>
+          <a href="Box-model.html#width-height-&-boder">Width, Height & Border</a>
+        </li>
+        <li>
+          <a href="Box-model.html#margin-&padding">Margin & Padding</a>
+        </li>
+        <li><a href="Box-model.html#Box-model.html#temario-box">Caja de Linea Vs Caja de bloque</a></li>
+        <li><a href="Box-model.html#display">Propiedad Display</a></li>
+        <li><a href="Box-model.html#visibility">Propiedad Visibility</a></li>
+        <li><a href="Box-model.html#overflow">Propiedad Overflow</a></li>
+        <li><a href="Box-model.html#boz-sizing">Tamaño de Caja(Box-Sizing)</a></li>
+        <li><a href="Box-model.html#float-&-clear">Propiedades Float & Clear</a></li>
+        <li><a href="Box-model.html#colapso-margenes">Colapso de Margenes Verticales</a></li>
+        <li><a href="Box-model.html#centrado-caja">Centrado de Caja</a></li>
+      </ul>
+      </article>
+    <hr>
+
+    <!-- -- Start Of The Course -- -->
+    <article id="modelo-de-caja">
+      <h2>Modelo de caja (Box Model)</h2>
+      <img
+          src="https://media.gcflearnfree.org/content/5ef2084faaf0ac46dc9c10be_06_23_2020/box_model.png"
+          alt="Modelo de Caja"
+          class="img-box"
+      />
+      <aside>
+          <p>
+            Modelo de Caja: Es la forma en que CSS ve a los elementos HTML y ¿cómo los ve? como si
+            fueran cajas con las siguientes propiedades:
+            <ol>
+                <li>
+                    El contenido (content): El contenido (texto) del elemento HTML, tomando en cuanta sus
+                    dimensiones (width & height)
+                </li>
+                <li>
+                    El relleno (padding): Son las distancias internas (La distancia del borde al contenido)
+                </li>
+                <li>El borde (border): Lo que delimita cada uno de los elementos HTML</li>
+                <li>
+                    El márgen (margin): Son las distancias externas (La distancia entre el elemento html y sus
+                    elementos hermanos o padres)
+                </li>
+            </ol>
+        </p>
+          <p>
+            Dentro del modelo de caja hay que considerar que una caja tendrá 4 lados:
+            <ol>
+                <li>Arriba (top)</li>
+                <li>Derecha (right)</li>
+                <li>Abajo (bottom)</li>
+                <li>Izquierda (left)</li>
+            </ol>
+        </p>
+      </aside>
+      <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae modi accusantium
+          consectetur expedita voluptates sint, adipisci sapiente quisquam dolore! Animi mollitia omnis
+          optio esse quisquam impedit magni fugiat cupiditate porro.
+      </p>
+      <p>Para mas informacion <a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/The_box_model"> click aqui</a></p>
+      <a href="Box-model.html#temario-box">Volver al Temario☝️</a>
+    </article>
+    <hr>
+    <article id="width-height-&-boder">
+      <h2>Width, Height & Border</h2>
+      <details>
+        <summary>Codigo CSS</summary>
+        <pre>
+          <code>
+            h1 {
+              width: 400px;
+              height: 100px;
+              /* propiedades de tipo shorthand */
+              border-color: mediumaquamarine;
+              border-width: thin; /*thin= 1px, medium= 3px, thick= 5px*/
+              border-style: solid;
+              /* Shorthand */
+              border: 2px dashed blue;
+            }            
+          </code>
+        </pre>
+      </details>
+      <p>Para mas informacion <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/width"> click aqui</a> y <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/height">aqui</a></p>
+      <a href="Box-model.html#temario-box">Volver al Temario☝️</a>
+    </article>
+    <hr>
+    <article id="margin-&-padding">
+      <h2>Margin & Padding</h2>
+      <p>Esto aplica para margin y padding</p>
+      <ul>
+        <li>"1" valor = aplicar a los 4 lados</li>
+        <li>"2" valores =
+          primer valor es para los lados verticales (t/b)
+          segundo valor es para los lados horizontales (l/r)</li>
+        <li>"3" valores = "Piensa en un Rombo"
+          primer valor es para top
+          segundo valor es para los lados horizontales (l/r)
+          tercer valor es para bottom</li>
+        <li>"4" valores = "Piensa en las manecillas del reloj"
+          primer valor es para top (12)
+          segundo valor es para right (3)
+          tercer valor es para bottom (6)
+          cuarto valor es para left (9)</li>
+      </ul>
+      <details>
+        <summary>Codigo CSS</summary>
+        <pre>
+          <code>
+            /* body {
+              margin: 0px;
+            } */
+            
+            .caja-uno,
+            .caja-dos {
+              background-color: chocolate;
+              border: medium solid orange;
+              padding: 20px;
+              margin: 20px;
+              padding: 20px 40px;
+              margin: 40px 20px;
+              padding: 0 40px 20px;
+              margin: 50px 30px 0;
+              padding: 0 40px 20px 50px;
+              margin: 100px 50px 30px 0;
+            }
+            
+          </code>
+        </pre>
+      </details>
+      <div class="caja-uno">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi a illo sed veritatis hic magnam,
+      ipsum at repellendus in? Harum illum et officiis ea aliquam magnam. Nihil at tempora incidunt.</div>
+      <div class="caja-dos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi a illo sed veritatis hic magnam,
+      ipsum at repellendus in? Harum illum et officiis ea aliquam magnam. Nihil at tempora incidunt.</div>
+      <p>Para mas informacion <a href="https://developer.mozilla.org/es/docs/Web/CSS/margin"> click aqui</a> y <a href="https://developer.mozilla.org/es/docs/Web/CSS/padding">aqui</a></p>
+      <a href="Box-model.html#temario-box">Volver al Temario☝️</a>
+    </article>
+    <hr>
+    <article id="caja-de-linea-vs-caja-de-bloque">
+      <h2>Cajas de Línea Vs Cajas de Bloque</h2>
+      <p>Caja de Linea</p>
+      <ul>
+        <li>Ocupan el espacio necesario para mostrar su contenido.</li>
+        <li>No tienen dimensiones modificables (alto, ancho).</li>
+        <li>Permiten otros elementos a su lado.</li>
+        <li>Padding y margin solo empujan a elementos adyacentes en horizontal, NUNCA EN VERTICAL.</li>
+      </ul>
+      <p>Caja de Bloque</p>
+      <ul>
+        <li>Ocupan todo el ancho disponible, lo que genera saltos de línea</li>
+        <li>Tienen dimensiones modificables (alto, ancho)</li>
+        <li>No permiten otros elementos a su lado (aunque especifique un ancho, siguen ocupando todo el espacio disponible a lo ancho, generando saltos de línea)</li>
+      </ul>
+      <span class="caja-linea">Esto es una caja de línea</span>
+      <span>Esto es una span</span>
+      <div class="caja-bloque">Esto es un caja de bloque</div>
+      <details>
+        <summary>Codigo CSS</summary>
+        <pre>
+          <code>
+            .caja-linea,
+            .caja-bloque {
+              background-color: darkcyan;
+              color: white;
+              width: 500px;
+              height: 250px;
+              border: medium solid black;
+              padding: 16px;
+            }
+  
+            .caja-bloque {
+              margin: 32px;
+              display: block;
+            }
+  
+            .caja-linea {
+              margin: 48px;
+              display: inline;
+            }
+  
+          </code>
+        </pre>
+      </details>
+      <a href="Box-model.html#temario-box">Volver al Temario☝️</a>
+    </article>
+    <hr>
+    <article id="display">
+      <h2>Propiedad Display</h2>
+      <p>Establece el comportamiento de visualización del elemento y especifica si un elemento es tratado como block o inline element y el diseño usado por sus hijos, como flow layout (Diseño de Flujo), grid (Cuadricula) o flex (Flexible).</p>
+      <details>
+        <summary>Codigo CSS</summary>
+        <pre>
+          <code>
+          /*Propiedad Display
+            inline
+            block
+            inline-block - Se comporta como un elemento de línea pero acepta modificar sus dimensiones (alto y ancho)
+            none
+            table
+            list-item
+            flex - ve mi curso de Flexbox CSS
+            grid - ve mi curso de Grid CSS*/
+
+          .caja-bloque {
+            margin: 32px;
+            display: block;
+          }
+
+          .caja-linea {
+            margin: 48px;
+            display: inline;
+          }
+
+          .caja-none,
+          .caja-linea-bloque {
+            background-color: darkolivegreen;
+            color: white;
+            width: 600px;
+            height: 300px;
+            border: medium solid black;
+          }
+
+          .caja-linea-bloque {
+            display: inline-block;
+          }
+
+          .caja-none {
+            display: none;
+          }
+          </code>
+        </pre>
+      </details>
+      <div class="caja-none">
+        Esto es una caja none
+      </div>
+      <span class="caja-linea-bloque">
+        Esto es una caja linea bloque
+      </span>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit necessitatibus, illum ex a, maxime, corporis
+        mollitia provident repellendus vel obcaecati dignissimos et aperiam porro quia molestias voluptatibus culpa dolorum
+        tenetur.
+      </p>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </ul>
+      <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </ol>
+      <table>
+        <tr>
+          <td>Celda 1</td>
+          <td>Celda 2</td>
+          <td>Celda 3</td>
+        </tr>
+        <tr>
+          <td>Celda 4</td>
+          <td>Celda 5</td>
+          <td>Celda 6</td>
+        </tr>
+        <tr>
+          <td>Celda 7</td>
+          <td>Celda 8</td>
+          <td>Celda 9</td>
+        </tr>
+      </table>
+      <p>Para mas informacion <a href="https://developer.mozilla.org/es/docs/Web/CSS/display"> click aqui</a></p>
+      <a href="Box-model.html#temario-box">Volver al Temario☝️</a>
+    </article>
+    <hr>
+    <article id="visibility">
+      <h2>Propiedad Visibility</h2>
+      <p>Esta propiedad se usa para esconder objetos, pero dejando el vacio del obejeto</p>
+      <details>
+        <summary>Codigo CSS</summary>
+        <pre>
+          <code>
+            .caja-hidden {
+              background-color: lightcoral;
+              color: white;
+              width: 600px;
+              height: 300px;
+              border: medium solid black;
+            }
+            
+            .caja-hidden {
+              visibility: visible;
+              visibility: hidden;
+            }
+          </code>
+        </pre>
+      </details>
+      <div class="caja-none">
+        Esto es una caja none
+      </div>
+      <div class="caja-hidden">
+        Esto es una caja hidden
+      </div>
+      <a href="Box-model.html#temario-box">Volver al Temario☝️</a>
+    </article>
+    <hr>
+    <article id="overflow">
+      <h2>Propiedad Overflow</h2>
+      <p>Define cómo se muestra el contenido desbordado tanto en el eje horizontal como en el vertical.</p>
+      <details>
+        <summary>Codigo CSS</summary>
+        <pre>
+          <code>
+            p[class*="overflow"] {
+              background-color: darkturquoise;
+              width: 200px;
+              height: 100px;
+              display: inline-block;
+            }
+            .overflow {
+              overflow: visible; /*hace visible el desbordamiento*/
+              overflow: hidden; /*oculta el desbordamiento*/
+              overflow: scroll; /*añade al desbordamiento un scroll en x y*/
+              overflow: auto; /*añade al desbordamiento un scroll auto/
+              /* overflow-y: scroll; */
+              /* overflow-x: scroll; */
+            }
+            .overflow-2 {
+              overflow: visible;
+            }
+            
+            /*-- Text-overflow --*/
+            .overflow-t {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: clip; /*El contenido del texto está recortado y no es accesible.*/
+            }
+            .overflow-t2 {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis; /*El contenido desbordante se reemplaza por puntos suspensivos*/
+            }
+            
+            /*-- Overflow-Wrap --*/
+            .overflow-w {
+              overflow: hidden;
+              overflow-wrap: break-word; /*Las palabras sin espacio se romperán tan pronto como lleguen al final de una línea.
+              */
+            }
+            .overflow-w2 {
+              overflow-wrap: normal; /*Las palabras sin espacio no se romperán. Las secuencias de caracteres ininterrumpidos se mostrarán en una sola línea.
+              */
+            }            
+          </code>
+        </pre>
+      </details>
+      <section>
+        <p class="overflow">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum tempore veniam nesciunt neque, laudantium
+          praesentium eaque fugit quidem quis, soluta minus maxime, tenetur modi optio accusamus? Dignissimos amet natus
+          voluptatibus.
+        </p>
+        <p class="overflow-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum tempore veniam nesciunt neque, laudantium
+          praesentium eaque fugit quidem quis, soluta minus maxime, tenetur modi optio accusamus? Dignissimos amet natus
+          voluptatibus.
+        </p>
+      </section>
+      <br>
+      <section>
+        <h3>Text-Overflow</h3>
+        <p>Define cómo se comporta el contenido de texto oculto si se desborda.
+        </p>
+        <p class="overflow-t">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum tempore veniam nesciunt neque, laudantium
+          praesentium eaque fugit quidem quis, soluta minus maxime, tenetur modi optio accusamus? Dignissimos amet natus
+          voluptatibus.
+        </p>
+        <p class="overflow-t2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum tempore veniam nesciunt neque, laudantium
+          praesentium eaque fugit quidem quis, soluta minus maxime, tenetur modi optio accusamus? Dignissimos amet natus
+          voluptatibus.
+        </p>
+      </section>
+      <br>
+      <section>
+        <h3>Overflow-wrap</h3>
+        <p>Define si las palabras deben romperse al llegar al final de una línea.</p>
+        <p class="overflow-w">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum tempore veniam nesciunt neque, laudantium
+          praesentium eaque fugit quidem quis, soluta minus maxime, tenetur modi optio accusamus? Dignissimos amet natus
+          voluptatibus.
+        </p>
+        <p class="overflow-w2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum tempore veniam nesciunt neque, laudantium
+          praesentium eaque fugit quidem quis, soluta minus maxime, tenetur modi optio accusamus? Dignissimos amet natus
+          voluptatibus.
+        </p>
+      </section>
+      <p>Para mas informacion <a href="https://cssreference.io/property/overflow/"> click aqui</a></p>
+      <a href="Box-model.html#temario-box">Volver al Temario☝️</a>
+    </article>
+    <hr>
+    <article id="box-sizing">
+      <h2>Tamaño de Caja (Box-Sizing)</h2>
+      <p>Define cómo se calculan el ancho y el alto del elemento: si incluyen el relleno y los bordes o no.
+      </p>
+      <p><b>"Content-box":</b>Suma Width+padding+border /  ampliando el valor del cuadro y manteniendo el width </p>
+      <p><b>"Border-box":</b>Resta Width-padding-border /  manteniendo el valor del cuadro y disminuyendo el width </p>
+      <details>
+        <summary>Codigo CSS</summary>
+        <pre>
+          <code>
+            .box-sizing-content,
+            .box-sizing-border {
+              background-color: lightskyblue;
+              box-sizing: content-box;
+              width: 500px;
+              height: 250px;
+              padding: 10px;
+              border: thick solid black;
+              /* w 500 + 10 + 10 + 5 + 5 = 530 */
+              /* h 250 + 10 + 10 + 5 +5  = 280 */
+            }
+            
+            .box-sizing-border {
+              box-sizing: border-box;
+            }
+            
+            .container-col-3 {
+              background-color: burlywood;
+              width: 600px;
+              height: 300px;
+              margin-top: 20px;
+            }
+            
+            .container-col-3 > * {
+              box-sizing: border-box;
+              width: 200px;
+              border: thin solid red;
+              padding: 10px;
+              float: left;
+            }
+            </code>
+        </pre>
+      </details>
+      <div class="box-sizing-content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ea accusamus nam sequi facere reprehenderit
+        maxime, laborum, quidem in omnis porro perspiciatis nemo corporis est hic numquam iste cupiditate quam?
+      </div>
+      <div class="box-sizing-border">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ea accusamus nam sequi facere reprehenderit
+        maxime, laborum, quidem in omnis porro perspiciatis nemo corporis est hic numquam iste cupiditate quam?
+      </div>
+      <article class="container-col-3">
+        <section class="item">Sección 1</section>
+        <section class="item">Sección 2</section>
+        <section class="item">Sección 3</section>
+      </article>
+      <p>Truco de <a href="https://www.paulirish.com/2012/box-sizing-border-box-ftw/">Box-Sizing de Paul Irish</a></p>
+      <p>Para mas informacion <a href="https://cssreference.io/property/box-sizing/"> click aqui</a></p>
+      <a href="Box-model.html#temario-box">Volver al Temario☝️</a>
+    </article>
+    <hr>
+    <article id="float-&-clear">
+      <h2>Propiedades Float & Clear</h2>
+      <section>
+        <p>Practica Vieja de los programadores, usar mejor <b>flexbox o grid</b> para evitar fallos (actualmente se considera mala practica)</p>
+        <p>Cuando se utiliza float quita todos los valores de css que tenga, "Como si no tuviera cuerpo y flotara sobre la pantalla o el codigo"</p>
+      </section>
+      <details>
+        <summary>Codigo CSS</summary>
+        <pre>
+          <code>
+            .container-floats {
+            background-color: #ff7d4a;
+            padding: 20px; /*No aplica a los elementos flotantes*/
+          }
+          
+          .float-left {
+            background-color: mediumpurple;
+            padding: 10px;
+            float: left;
+          }
+          
+          .float-right {
+            background-color: bisque;
+            padding: 10px;
+            float: right;
+          }
+          
+          .clearfix {
+            background-color: #7fffd4;
+            padding: 10px;
+            clear: both; /*Arreglo del elementos float */
+          }
+          </code>
+        </pre>
+      </details>
+      <article class="container-floats">
+        <section class="float-right">Este elemento flota a la derecha</section>
+        <section class="float-left">Este elemento flota a la izquierda</section>
+      </article>
+      <div class="clearfix">Esto es una caja ClearFix</div>
+      <article>
+        <section class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, harum doloribus, officiis facilis
+          quam animi voluptate expedita magni natus nesciunt aliquam quod vel. Iste sed cumque aliquid cupiditate labore
+          doloremque.</section>
+      </article>
+      <p>Para mas informacion <a href="https://cssreference.io/property/float/"> click aqui</a> y <a href="https://cssreference.io/property/clear/">aqui</a></p>
+      <a href="Box-model.html#temario-box">Volver al Temario☝️</a>
+    </article>
+    <hr>
+    <article id="colapso-margenes">
+      <h2>Colapso de Margenes Verticales</h2>
+      <section>
+        <p>cuando aplicas margin a lados verticales(Top y Buttom), estos no se suman, se complementan(Escogen el de mayor valor), dando un error estetico</p>
+        <p>La solucion para estos espaciados son contar <b>unicamente</b> con la propiedad bottom o top // para las cajas, y para los hijos contar con overlow</p>
+      </section>
+      <details>
+        <summary>Codigo CSS</summary>
+        <pre>
+          <code>.margin-collapse {
+            background-color: #7fffd4;
+          }
+          
+          .margin-collapse section {
+            border: medium solid black;
+            background-color: #9370d8;
+            padding: 10px;
+            margin-top: 16px;
+            margin-bottom: 16px; /*NO se suman*/
+          }
+          
+          .margin-collapse span {
+            border: medium solid black;
+            display: inline-block;
+            margin-left: 16px;
+            margin-right: 16px; /*SI se suman*/
+          }</code>
+        </pre>
+      </details>
+      <section>
+        <h3>Adicion de Margenes Horizontales y Verticales</h3>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error dignissimos laborum consectetur, quas praesentium
+          debitis repellat? Ipsa, consectetur. Porro a ullam iure inventore molestias cumque, quis provident iste nam
+          doloribus.</div>
+        <article class="margin-collapse">
+          <section>Sección 1</section>
+          <section>Sección 2</section>
+          <section><span>Span 1</span><span>Span 2</span><span>Span 3</span></section>
+        </article>
+      </section>
+      <a href="Box-model.html#temario-box">Volver al Temario☝️</a>
+    </article>
+    <hr>
+    <article id="centrado-caja">
+      <h2>Centrado de Caja</h2>
+      <p>Un ejemplo de como centrar <b>"unicamente"</b> una caja</p>
+      <details>
+        <summary>Codigo CSS</summary>
+        <pre>
+          <code>
+            .sitio-web {
+            border: medium solid black;
+            background-color: #7fffd4;
+            width: 200px;
+            height: 300px;
+            text-align: center; /*Centra el contenido mas no la caja*/
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            /* margin: 0 auto; Shorthand */
+          }
+          </code>
+        </pre>
+      </details>
+      <section>
+        <article class="sitio-web">
+          <header>Cabecera</header>
+          <main>Contenido Principal</main>
+          <footer>Pié de página</footer>
+        </article>
+      </section>
+      <a href="Box-model.html#temario-box">Volver al Temario☝️</a>
+    </article>
+  </body>
+</html>

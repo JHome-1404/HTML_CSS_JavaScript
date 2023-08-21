@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" id="#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unidades de Medida CSS</title>
+
+    <!-- Links -->
+    <link rel="stylesheet" href="Assets/Units.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+  </head>
+  <body>
+    <h1>Unidades de Medida CSS</h1>
+    <p><a href="Index-2.html">👈 Volver al Index</a></p>
+    <hr />
+    <article>
+      <p>
+        <b>1) Absolutas</b> (Su valor no cambia, son unidades del mundo real) <br />
+        pc(pársec), cm, mm, in(Pulgadas), Q(Cuarto del Pulgada) <br />
+        <br />
+        pt (1/72in) (Puntos) <br />
+        px (1/96in) (Pixeles)
+      </p>
+      <p>
+        <b>2) Relativas</b> Su valor es relativo a un contexto) <br />
+        <br />
+        <b>em, rem, ex, ch - al tamaño de la fuente</b> <br />
+        <br />
+        em - basada en la anchura de la "m" de la fuente del elemento <br />
+        rem - basada en la anchura de la "m" de la fuente del elemento raíz (html) <br />
+        ex - basada en la altura de la "x" de la fuente del elemento <br />
+        ch - basada en la anchura del "0" de la fuente del elemento <br /><br />
+        <b>% - al tamaño del contenedor</b> <br />
+        <b>vw, vh, vmin, vmax - al tamaño del viewport</b> <br />
+        vw - ancho del viewport van de 1 a 100 <br />
+        vh - alto del viewport van de 1 a 100 <br />
+        vmax - entre vw y vh toma el que tenga mayor valor <br />
+        vmin - entre vw y vh toma el que tenga menor valor
+      </p>
+    </article>
+    <hr />
+
+    <!-- Temario -->
+    <article>
+      <h2>Temario Unidades de Medida CSS</h2>
+      <ul>
+        <li><a href="#pixeles">Pixeles</a></li>
+        <li><a href="#ems">EMs</a></li>
+        <li><a href="#rems">REMs</a></li>
+        <li><a href="#exs">EXs</a></li>
+        <li><a href="#chs">CHs</a></li>
+        <li><a href="#%">Porcentajes</a></li>
+        <li><a href="#vwp">Unidades del Viewport</a></li>
+        <li><a href="#utilizacion">¿Cuando usar cada unidad de medida?</a></li>
+      </ul>
+    </article>
+    <hr />
+
+    <!-- -- Start Of The Course -- -->
+    <h2>Pixeles (px)</h2>
+    <article id="pixeles">
+      <p>Son una 96 parte de una pulgada(in)</p>
+      <p>Su unidad de medida no cambia sin importar el dispositivo(Responsive Design)</p>
+      <div class="pixels">Soy una caja con unidades en Pixeles</div>
+    </article>
+    <hr>
+    <h2>EMs (em)</h2>
+    <article id="ems">
+      <p>
+        Esta basada en la anchura de la letra "M" (caracter mas ancho), basado en el tamaño de la fuente que tiene
+        por defecto (font-size: 16px) <br />
+        <b>Defecto: 1em = 16px</b> <br>
+        Toma el valor inherido del contenedor padre o base, es decir: si son font-size: 24px; el tamaño del em es 1em = 24px, 2em = 48px, etc..
+      </p>
+      <div class="ems">
+        Soy una caja con unidades en Ems
+        <div class="em-child">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus perspiciatis earum
+          necessitatibus dolorem aspernatur. Voluptate optio totam nihil. Facilis odit quidem, omnis
+          provident praesentium quia. Adipisci eaque sint alias voluptates.
+        </div>
+      </div>
+      <div>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque itaque quibusdam dolore
+        aut. Et debitis magnam vel. Aperiam enim rem itaque perspiciatis ut alias non. Eligendi
+        aliquid tempora neque dolorem.
+      </div>
+    </article>
+    <hr>
+    <h2>REMs (rem)</h2>
+    <article id="rems">
+      <p>
+        El Rems siempre tomara como base el tamaño de letra del HTML
+      </p>
+      <div class="rems">
+        Soy una caja REMs
+        <div class="rems-child">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit obcaecati earum suscipit quos veniam officia consequuntur recusandae molestias ex accusantium eaque id dolorem fugiat eos, tempore porro exercitationem iste libero.</div>
+      </div>
+      </article>
+      <h2>EXs (ex)</h2>
+    <article id="exs">
+        <p>
+            Esta basada en la altura de la letra "X", <br>
+            basados en el tamaño de la fuente que tiene por defecto (font-size: 16px;) <br>
+            valores ingeridos igual que ems
+        </p>
+        <div class="exs">
+            Soy una caja con unidades en EXs
+            <div class="ex-child">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus perspiciatis earum
+              necessitatibus dolorem aspernatur. Voluptate optio totam nihil. Facilis odit quidem, omnis
+              provident praesentium quia. Adipisci eaque sint alias voluptates.
+            </div>
+            </div>
+          </div>
+          <div>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque itaque quibusdam dolore
+            aut. Et debitis magnam vel. Aperiam enim rem itaque perspiciatis ut alias non. Eligendi
+            aliquid tempora neque dolorem.
+          </div>
+    </article>
+    <hr>
+    <h2>CHs (ch)</h2>
+    <article id="chs">
+        <p>
+            Se basan explicitamente(Exactamente) en el numero de caracteres que contenga, es decir, si colocas background-color: 15ch; se aplicara solo a 15 caracteres <br>
+            para tapar lo que sobra con atributo <b>overflow</b>
+        </p>
+        <div class="chs">
+            1234567890        
+        </div>
+        <div class="chs">
+            asdfghjklasdaaaa
+        </div>
+    </article>
+    <hr>
+    <h2>Porcentajes(%)</h2>
+    <article id="%">
+        <p>
+            Toma tambien como base las propiedades del HTML o del contenedor padre que lo contenga <br>
+            <b>IMPORTANTE//</b> Su tamaño se basa en la ventana del navegador
+        </p>
+        <div class="porcentages">Soy una caja de Bloque</div>
+        <div class="height-parent">
+            <section class="height-child">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus beatae totam culpa praesentium placeat odio officia pariatur cumque ea? Harum ipsum vero distinctio dolor corrupti doloribus id molestiae aliquid temporibus!</section>
+        </div>
+        <!-- <span class="porcentages">Soy una caja de Linea</span> -->
+    </article>
+    <hr>
+    <h2>Unidades del Viewport</h2>
+    <article id="vwp">
+        <p>
+            Valores definidos por el tamaño de la pantanlla, unidades parecidas al Porcentaje, pero diferente <br>
+            Se adapta al tamaño de la ventana del operador <br>
+            <b>IMPORTANTE//</b> Con viewport se adapta a la pantalla(Con Scroll) del navegadir, no a los contendedores padres, ni a la ventana del navegador
+        </p>
+        <div class="viewport">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero molestias culpa ducimus mollitia provident, omnis repellat ipsa porro obcaecati esse vel voluptates ab sint eveniet unde ullam suscipit, facere repellendus!
+        </div>
+        <section>
+            <div class="viewport">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero molestias culpa ducimus mollitia provident, omnis repellat ipsa porro obcaecati esse vel voluptates ab sint eveniet unde ullam suscipit, facere repellendus!
+            </div>
+        </section>
+        <div class="vmax">Caja Vmax</div>
+        <div class="vmin">Caja Vmin</div>
+    </article>
+    <hr>
+    <h2>¿Cuando usar cada unidad de medida?</h2>
+    <article id="utilizacion">
+      <h3>Recomendaciones</h3>
+      <p>
+        <b>las unidades Absolutas:</b> los px Convienen cuando se implementa impresion en tu pagina web <br><br>
+        <b>las unidades Relativas:</b> los em y los rem, se recomienda que el font-size dek html sea en px; rem para tipografia, y em para elementos de caja (padding, margin,etc..)(Efecto zoom) <br>
+        los % se utilizan mas que todo para Responsive Design <br>
+        los vw para modelos que sean fluidos y adaptable a la pantalla.
+      </p>
+    </article>
+    
+    <!-- -- Button -- -->
+    <a href="##" alt="img.png" class="button">
+      <i class="fi fi-sr-arrow-circle-up"></i>
+    </a>
+  </body>
+</html>

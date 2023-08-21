@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap");
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+:root {
+  --bg-body: #1f2937;
+  --font-color: #fff;
+  --link-color: #dfff86;
+  --link-hover: #73cffa;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-body);
+  color: var(--font-color);
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Raleway";
+  font-display: swap;
+  margin: 0%;
+  padding: 0% 25%;
+}
+
+.temario {
+  /* background-color: #dfff86; */
+  width: 35em;
+  height: auto;
+  padding: 3em;
+}
+
+.container-temario {
+  /* background-color: #73cffa; */
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 18px;
+  font-size: 1.3em;
+}
+
+.temario hr {
+  width: 55%;
+  height: auto;
+  border-style: solid;
+  border-width: 1.5px;
+}
+
+.temario h2 {
+  color: var(--font-color);
+  font-size: 3em;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+
+.temario a {
+  overflow: auto;
+}
+
+a {
+  color: var(--link-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+/*--- Button ---*/
+
+.arrow-left {
+  color: var(--link-color);
+  position: absolute;
+  z-index: 99;
+  top: 2%;
+  left: 2%;
+  font-size: 60px;
+}
+
+.arrow-left:hover {
+  color: var(--link-hover);
+}

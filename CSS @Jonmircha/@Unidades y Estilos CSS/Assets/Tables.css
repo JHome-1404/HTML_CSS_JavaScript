@@ -1,0 +1,67 @@
+:root {
+  --color-1: #073b4c;
+  --color-2: #ffd166;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--color-1);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-2);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-1);
+}
+
+/*--- Button ---*/
+
+i {
+  font-size: 60px;
+  position: fixed;
+  top: 90%;
+  right: 2%;
+  scroll-behavior: smooth;
+}
+
+/*--- --- Star of the Code --- --- */
+/*--- --- Star of the Code --- --- */
+
+.table {
+  background-color: #ffd166;
+  font-size: 3rem;
+  /* Separa o unir bordes de tabla */
+  /* Default */
+  border-collapse: separate;
+  /* Fusionar Bordes */
+  border-collapse: collapse;
+  border-collapse: separate;
+  /* Casillas vacias*/
+  /* Defecto */
+  empty-cells: show;
+  empty-cells: hide;
+}
+
+table,
+th,
+td {
+  border: medium solid #000;
+  /* border-collapse *Necesario */
+  border-spacing: 0px;
+  border-spacing: 10px;
+}

@@ -1,0 +1,33 @@
+:root {
+  --color-1: #073b4c;
+  --color-2: #ffd166;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+a {
+  color: var(--color-1);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-2);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-1);
+}
+
+/*-- -- Button -- --*/
+/*-- -- Button -- --*/
+
+i {
+  font-size: 60px;
+  position: fixed;
+  top: 90%;
+  right: 2%;
+  scroll-behavior: smooth;
+}

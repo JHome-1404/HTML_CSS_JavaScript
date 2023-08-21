@@ -1,0 +1,80 @@
+:root {
+  --color-1: #073b4c;
+  --color-2: #ffd166;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--color-1);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-2);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-1);
+}
+
+/*--- Button ---*/
+
+i {
+  font-size: 60px;
+  position: fixed;
+  top: 90%;
+  right: 2%;
+  scroll-behavior: smooth;
+}
+
+/*--- --- Star of the Code --- --- */
+/*--- --- Star of the Code --- --- */
+
+/* Buena practica */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card {
+  border: medium solid #000;
+  width: 300px;
+  height: 500px;
+  text-align: center;
+}
+
+/* Cuando activa una se activa la otra */
+.card img {
+  background-color: #cbffee;
+  height: 350px;
+  /* - cover: cambia el tamaño de la imagen de fondo para asegurarse de que permanezca completamente visible
+  - contain: cambia el tamaño de la imagen de fondo para asegurarse de que el elemento esté completamente cubierto */
+  /* Defecto: fill */
+  object-fit: fill;
+  object-fit: cover;
+  object-fit: contain;
+  object-fit: none;
+  /* toma el valor que sea menor de los valores contain y none */
+  object-fit: scale-down;
+
+  /* igual que background-position */
+  /* Defecto: 50% 50% */
+  object-position: 50% 50%;
+  object-position: left top;
+  object-position: right bottom;
+  object-position: 50px center;
+  object-position: -50px center;
+  object-position: center;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" id="#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tablas en CSS</title>
+    <!-- Button -->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <!-- Link -->
+    <link rel="stylesheet" href="Assets/Tables.css" />
+    <title>Estilos de Tablas CSS</title>
+  </head>
+  <body>
+    <h1>Estilos de Tablas CSS</h1>
+    <p><a href="Index-2.html">👈 Volver al Index</a></p>
+    <hr />
+
+    <!-- Temario -->
+    <article>
+      <h2>Temario Estilos Tablas en CSS</h2>
+      <ul>
+        <li><a href="#style">Estilos Tablas</a></li>
+      </ul>
+    </article>
+    <hr />
+
+    <!-- --- Start Of The Course --- -->
+    <h2>Estilos de Tablas CSS</h2>
+    <article>
+      <pre>
+        .table {
+          background-color: #ffd166;
+          font-size: 3rem;
+          /* Separa o unir bordes de tabla */
+          /* Default */
+          border-collapse: separate;
+          /* Fusionar Bordes */
+          border-collapse: collapse;
+          border-collapse: separate;
+          /* Casillas vacias*/
+          /* Defecto */
+          empty-cells: show;
+          empty-cells: hide;
+        }
+        
+        table,
+        th,
+        td {
+          border: medium solid #000;
+          /* border-collapse *Necesario */
+          border-spacing: 0px;
+          border-spacing: 10px;
+        }
+        
+      </pre>
+      <table class="table">
+        <tr>
+          <th>A</th>
+          <th>B</th>
+          <th>C</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td></td>
+          <td>9</td>
+        </tr>
+      </table>
+    </article>
+
+    <!-- Button  -->
+    <a href="##" alt="img.png" class="button">
+      <i class="fi fi-sr-arrow-circle-up"></i>
+    </a>
+  </body>
+</html>

@@ -1,0 +1,186 @@
+:root {
+  --color-1: #073b4c;
+  --color-2: #ffd166;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--color-1);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-2);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-1);
+}
+
+/*-- -- Button -- --*/
+/*-- -- Button -- --*/
+
+i {
+  font-size: 60px;
+  position: fixed;
+  top: 90%;
+  right: 2%;
+  scroll-behavior: smooth;
+}
+
+/*-- -- Star of the Code -- -- */
+/*-- -- Star of the Code -- -- */
+
+/*-- Background --*/
+
+.box {
+  margin: 2rem auto;
+  width: 250px;
+  height: 250px;
+  border: 10px dashed #000;
+}
+
+.box p {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 2rem;
+}
+
+/* 
+background-color: define el color de fondo del elemento
+background-image: define la imagen de fondo del elemento
+background-size: define el tamaño de la imagen de fondo, primer valor x, segundo y
+    - cover: cambia el tamaño de la imagen de fondo para asegurarse de que permanezca completamente visible
+    - contain: cambia el tamaño de la imagen de fondo para asegurarse de que el elemento esté completamente cubierto
+background-repeat: define cómo se repite la imagen de fondo en el elemento
+background-position:
+  define la posición de la imagen de fondo, primer valor x, segundo y, si no se especifica un segundo valor éste será center
+  aparte de valores numéricos podemos indicar el posicionamiento con las palabras: center, top, bottom, left and right
+background-clip: define cuánto debe extenderse el fondo dentro del elemento.
+background-origin: define el origen de la imagen de fondo.
+background-attachment: define cómo se comportará la imagen de fondo al desplazarse por la página
+*/
+
+.bg-color {
+  background-color: #ffd166;
+}
+
+.bg-image {
+  background-image: url(https://www.kibrispdr.org/data/742/logo-apex-legends-4.jpg);
+}
+
+.bg-size {
+  background-image: url(https://www.kibrispdr.org/data/742/logo-apex-legends-4.jpg);
+  /* Primer valor x segundo y */
+  background-size: 100% 70%;
+  background-size: 100%;
+  background-size: cover;
+  background-size: contain;
+}
+
+.bg-repeat {
+  background-image: url(https://www.kibrispdr.org/data/742/logo-apex-legends-4.jpg);
+  background-size: 50%;
+  background-repeat: repeat;
+  background-repeat: repeat-x;
+  background-repeat: repeat-y;
+  background-repeat: no-repeat;
+}
+
+.bg-position {
+  background-color: #c02323;
+  background-image: url(https://www.kibrispdr.org/data/742/logo-apex-legends-4.jpg);
+  background-size: 80%;
+  background-repeat: no-repeat;
+  /* Primer valor x segundo y */
+  background-position: 22px 70px;
+  background-position: 10% 20%;
+  background-position: 10%;
+  background-position: 10% center;
+  background-position: top center;
+  background-position: top right;
+  background-position: top left;
+  background-position: top;
+  background-position: bottom center;
+  background-position: bottom right;
+  background-position: bottom left;
+  background-position: bottom;
+}
+
+.bg-clip {
+  background-color: #c02323;
+  background-image: url(https://www.kibrispdr.org/data/742/logo-apex-legends-4.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  /* Defecto */
+  background-clip: border-box;
+  /* Aplica imagen estilo padding */
+  background-clip: padding-box;
+  background-clip: content-box;
+  padding: 1rem;
+}
+.bg-origin {
+  background-color: #c02323;
+  background-image: url(https://www.kibrispdr.org/data/742/logo-apex-legends-4.jpg);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-clip: padding-box;
+  padding: 2rem;
+  /* Default */
+  background-origin: padding-box;
+  background-origin: border-box;
+  background-origin: content-box;
+}
+
+.bg-attachment {
+  background-color: #c02323;
+  background-image: url(https://www.kibrispdr.org/data/742/logo-apex-legends-4.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 2rem;
+  width: 100%;
+  height: 50vh;
+  /* Default */
+  background-attachment: scroll;
+  background-attachment: fixed;
+}
+
+/* Background shorthand, de todos las propiedades anteriores  */
+
+/*-- Fondos Multiple --*/
+
+.bg-multiple {
+  background-size: 20% 100%, contain;
+  background-position: center;
+  width: 100%;
+  height: 50vh;
+  /* El orden importa */
+  background-image: url(https://cdn.wallpapersafari.com/54/25/xG7msA.jpg),
+    url(https://www.kibrispdr.org/data/742/logo-apex-legends-4.jpg);
+  /* No se repite el primero, el segundo si */
+  background-repeat: no-repeat, repeat;
+}
+
+.bg-art {
+  width: 80%;
+  height: 45vh;
+  background-image: url(https://i.pinimg.com/originals/ea/69/33/ea6933ab571dce4677e4880824544fad.png),
+    url(https://w0.peakpx.com/wallpaper/920/452/HD-wallpaper-octane-apex-legends-games.jpg);
+  background-repeat: no-repeat;
+  background-clip: border-box;
+  background-size: 20%, contain;
+  background-position: center;
+  background-attachment: fixed, scroll;
+}

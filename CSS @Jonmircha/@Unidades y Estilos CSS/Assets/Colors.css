@@ -1,0 +1,193 @@
+:root {
+  --color-1: #073b4c;
+  --color-2: #ffd166;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+a {
+  color: var(--color-1);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-2);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-1);
+}
+
+/*-- -- Button -- --*/
+/*-- -- Button -- --*/
+
+i {
+  font-size: 60px;
+  position: fixed;
+  top: 90%;
+  right: 2%;
+  scroll-behavior: smooth;
+}
+
+/*-- -- Star of the Code -- -- */
+/*-- -- Star of the Code -- -- */
+
+/*-- -- Colores CSS -- --*/
+/*-- -- Colores CSS -- --*/
+
+.color-by-name {
+  background-color: lightgreen;
+  color: black;
+  border: medium solid lightseagreen;
+}
+
+/* 
+RedGreenBlue (Medios Digitales) vs CyanMagentaYellowKey (Medios Impresos)
+*/
+
+/*-- Hexadecimal --*/
+/*-- Hexadecimal --*/
+
+/* 
+Sistema Hexadecimal
+0123456789ABCDEF
+
+Colores en HEX va a ser colores de 6 dígitos
+#ff6600
+*/
+
+.color-hex {
+  background-color: #ff6600;
+  background-color: #f60;
+  background-color: #ff6605;
+  background-color: #00000000;
+  /* Shorthand */
+  background-color: #00000055; /*Opacity en 6n*/
+  background-color: #0003; /*Opacity en 3n*/
+  color: #12ac78;
+  border: medium solid #ffffff;
+  border: medium solid #fff;
+  border: medium solid #ff0000;
+  border: medium solid #f00;
+  border: medium solid #00ff00;
+  border: medium solid #0f0;
+  border: medium solid #0000ff;
+  border: medium solid #00f;
+  border: medium solid #000000;
+  border: medium solid #000;
+}
+
+/*-- RGB --*/
+/*-- RGB --*/
+
+/* 
+Sistema RGB
+  Acepta 8 bits por canal de color
+
+  Bit (0/1) 2 elevado a la potencia 8 = 2*2*2*2*2*2*2*2 = 256
+
+  Por cada canal de color tenemos valores que van del 0 al 255
+
+  rgba opacidad / escala de 0.1 a 1
+*/
+
+.color-rgb {
+  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 0, 0);
+  background-color: rgb(0, 255, 0);
+  background-color: rgb(0, 0, 255);
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.92); /*Opacity en 4n*/
+  background-color: rgba(222, 184, 135, 0.92); /*Opacity en 4n*/
+  color: rgb(255, 102, 0);
+  color: rgb(0, 0, 0);
+  border: thick solid rgb(128, 109, 7);
+  border-color: rgb(210, 105, 30);
+}
+
+/*-- HSL --*/
+/*-- HSL --*/
+
+/* 
+Sistema HSL
+HueSaturationLightness (Tono-Saturación-Luminosidad)
+
+El primer es Hue (Círculo Cromático)
+  0° -> red
+  60° -> yellow
+  120° -> green
+  180° -> cyan
+  240° -> blue
+  300° -> magenta
+
+El segundo valor es Saturation (Intensidad del Color)
+  0% -> Escala de grises
+  100% -> Color puro
+
+El tercer valor es Lightness (Luminosidad del Color)
+  0% -> negro
+  50% -> color puro
+  100% -> blanco
+
+El cuarto valor con hsla es Opacity (Opacidad)
+  0º -> opaco
+  1º -> solido
+*/
+
+.color-hsl {
+  background-color: hsl(0, 100%, 50%);
+  background-color: hsl(120, 100%, 50%);
+  background-color: hsl(240, 100%, 50%);
+  background-color: hsl(30, 100%, 50%);
+  background-color: hsla(30, 100%, 50%, 0.5); /*Opacity en 4n*/
+  background-color: hsla(30, 100%, 50%, 0.25); /*Opacity en 4n*/
+  background-color: hsla(30, 100%, 50%, 0); /*Opacity en 4n*/
+  background-color: hsla(30, 100%, 50%, 0.75); /*Opacity en 4n*/
+  color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
+  border: thick solid hsl(210, 75%, 65%);
+}
+
+/*-- Transparent & Current --*/
+/*-- Transparent & Current --*/
+
+/* 
+Valor transparent: color transparente es igual a aplicar rgba(0,0,0,0)
+Valor currentColor: Hereda el valor por defecto o asignado de la propiedad color, del ancestro que tenga definida esta propiedad, busca del ancestro más cercano al más alejado
+*/
+
+.color-transparent-current {
+  background-color: #ffd166;
+  background-color: transparent;
+  background-color: currentColor; /*Hereda color*/
+  color: orangered; /*Hereda este valor*/
+  border: medium solid currentColor; /*Hereda color*/
+}
+
+/*-- Opacity --*/
+
+.opacity {
+  background-color: lightcyan;
+  color: black;
+  border: medium solid black;
+  opacity: 0.5;
+  opacity: 1;
+  opacity: 0;
+  opacity: 0.75;
+}
+
+.opacity-00 {
+  opacity: 0;
+}
+.opacity-10 {
+  opacity: 0.1;
+}
+.opacity-20 {
+  opacity: 0.2;
+}
+.opacity-30 {
+  opacity: 0.3;
+}

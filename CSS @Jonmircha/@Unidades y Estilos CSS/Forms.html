@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" id="#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tablas en CSS</title>
+    <!-- Button -->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <!-- Link -->
+    <link rel="stylesheet" href="Assets/Forms.css" />
+    <title>Formularios en CSS</title>
+  </head>
+  <body>
+    <h1>Formularios en CSS</h1>
+    <p><a href="Index-2.html">👈 Volver al Index</a></p>
+    <hr />
+
+    <!-- Temario -->
+    <article>
+      <h2>Temario Formularios en CSS</h2>
+      <ul>
+        <li><a href="#contact">Formulario de Contacto</a></li>
+      </ul>
+    </article>
+    <hr />
+
+    <!-- --- Start Of The Course --- -->
+    <article id="contact" class="form">
+      <h2>Estilos de Formularios</h2>
+      <p>
+        <a href="https://materializecss.com/getting-started.html">Materialize -CSS</a> //Framework
+      </p>
+      <form
+        class="contact-form"
+        action="https://formsubmit.co/your@email.com"
+        method="POST"
+        autocomplete="off"
+      >
+        <input
+          type="text"
+          name="nombre"
+          placeholder="Escribe tu nombre"
+          pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+          title="Solo acepta letras sin espacios en blanco"
+          required
+        />
+        <input
+          type="email"
+          name="correo"
+          placeholder="Escribe tu correo"
+          pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$"
+          title="Formato de correo inválido"
+          required
+        />
+        <textarea
+          name="comentarios"
+          placeholder="Escribe tus comentarios"
+          cols="30"
+          rows="10"
+          title="Escriba su Comentario"
+          required
+        ></textarea>
+        <input type="submit" />
+      </form>
+    </article>
+
+    <!-- Button  -->
+    <a href="##" alt="img.png" class="button">
+      <i class="fi fi-sr-arrow-circle-up"></i>
+    </a>
+  </body>
+</html>

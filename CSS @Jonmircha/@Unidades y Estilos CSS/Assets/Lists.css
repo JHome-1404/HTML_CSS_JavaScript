@@ -1,0 +1,134 @@
+:root {
+  --color-1: #073b4c;
+  --color-2: #ffd166;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--color-1);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-2);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-1);
+}
+
+/*--- Button ---*/
+
+i {
+  font-size: 60px;
+  position: fixed;
+  top: 90%;
+  right: 2%;
+  scroll-behavior: smooth;
+}
+
+/*--- --- Star of the Code --- --- */
+/*--- --- Star of the Code --- --- */
+
+.list {
+  /* Shorthand */
+  /* list-style...*/
+
+  /* Estilo */
+  /* Defecto */
+  list-style-type: disc;
+  list-style-type: square;
+  list-style-type: circle;
+  list-style-type: lower-roman;
+  list-style-type: upper-roman;
+  list-style-type: decimal;
+  list-style-type: decimal-leading-zero;
+  list-style-type: lower-greek;
+  list-style-type: none;
+
+  /* Imagen */
+  /* La imagen tiene que ser de medidas exactas */
+  list-style-image: url(https://cssreference.io/images/list-style-image.png);
+  /* Defecto */
+  list-style-image: none;
+  list-style-image: url(Image/favicon.png);
+  list-style-image: none;
+}
+
+/* Arreglo de error list-image */
+.list li {
+  list-style-type: none;
+}
+
+.list li::before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-image: url(Image/favicon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Position */
+.list-2 li:first-of-type {
+  background-color: #ffd166;
+  /* Default */
+  list-style-position: outside;
+}
+
+.list-2 li {
+  background-color: #f08080;
+  list-style-position: inside;
+}
+
+/* Shorthand */
+.list-3 li {
+  background-color: #ffa07a;
+}
+
+.list-3 {
+  /* tipo, imagen & position */
+  list-style: lower-latin none outside;
+  list-style: lower-latin url(https://cssreference.io/images/list-style-image.png) outside;
+}
+
+/*--- Texto en Columnas ---*/
+
+.text-column-4 li {
+  background-color: limegreen;
+  /* Para no pegar con la linea */
+  list-style-position: inside;
+}
+
+.text-column-4 {
+  /* Numero de columnas */
+  column-count: 4;
+  /* Espacio entre columnas */
+  column-gap: 2rem;
+  /* Regla entre lineas */
+  column-rule: thin solid #000;
+  /* Tamaño minimo de witdh de la columna */
+  column-width: 100px;
+}
+
+.text-column-3 {
+  background-color: #ffb6c1;
+  column-count: 3;
+  column-gap: 8rem;
+  column-rule: thin solid #000;
+  column-width: 100px;
+}

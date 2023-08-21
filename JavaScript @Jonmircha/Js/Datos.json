@@ -1,0 +1,10 @@
+{
+  "nombre": "Jesus",
+  "apellido": "Home",
+  "edad": 18,
+  "Soltero": true,
+  "Lenguajes": ["JavaScript", "Python", "SQL", "PHP"],
+  "redes": {
+    "example": "jesushome@example.com"
+  }
+}

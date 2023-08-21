@@ -1,0 +1,159 @@
+:root {
+  --color-1: #073b4c;
+  --color-2: #ffd166;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--color-1);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-2);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-1);
+}
+
+/*-- -- Button -- --*/
+/*-- -- Button -- --*/
+
+i {
+  font-size: 60px;
+  position: fixed;
+  top: 90%;
+  right: 2%;
+  scroll-behavior: smooth;
+}
+
+/*-- -- Star of the Code -- -- */
+/*-- -- Star of the Code -- -- */
+
+/*-- Border-radius --*/
+/*-- Border-radius --*/
+
+/*
+Valor 1 = top-left, bottom-right
+Valor 2 = top-right, bottom-left
+
+Valor 1 = top-left
+Valor 2 = top-right, bottom-left
+Valor 3 = bottom-right
+
+Valor 1 = top-left
+Valor 2 = top-right
+Valor 3 = bottom-right
+Valor 4 = bottom-left
+*/
+
+.border-radius {
+  background-color: #ffb6c1;
+  width: 250px;
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 9px solid #000;
+  /* Shorthands */
+  border-radius: 2rem;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 6rem;
+  border-bottom-right-radius: 8rem;
+  border-bottom-left-radius: 1rem;
+  border-radius: 5rem;
+}
+.border-radius-2 {
+  /* 2 Valores */
+  border-radius: 2rem 8rem;
+}
+.border-radius-3 {
+  /* 3 Valores */
+  border-radius: 2rem 4rem 0rem;
+}
+.border-radius-4 {
+  /* 4 Valores */
+  border-radius: 2rem 4rem 0rem 10rem;
+}
+
+/* --Eliptico-- */
+.border-radius-e {
+  /* 1 Valor */
+  border-radius: 2rem / 4rem;
+  border-radius: 10% / 50%;
+}
+/* 2 Valores */
+.border-radius-e-2 {
+  border-radius: 50% 20% / 10% 40%;
+}
+
+/* --Extra-- */
+.example {
+  background-color: #ffb6c1;
+  width: 200px;
+  height: 200px;
+  border: 9px solid #000;
+  margin: 10px;
+  display: inline-block;
+}
+
+.container {
+  width: 750px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div[class*="border"] p {
+  font-size: 25px;
+  text-align: center;
+  margin-top: 90px;
+  margin-left: auto;
+}
+
+.eliptico {
+  background-color: #ffa07a;
+  width: 200px;
+  height: 200px;
+  border: 9px solid #000;
+  margin: 10px;
+  display: inline-block;
+}
+
+.img {
+  width: 900px;
+  height: 600px;
+  display: inline-block;
+}
+
+/*-- Outline --*/
+
+/* El borde ocupa espacio de la caja  */
+/* El outline NO  */
+
+.box-outline {
+  width: 15rem;
+  height: 15rem;
+  border: 20px solid #000;
+  text-align: center;
+  margin-left: 34vw;
+  margin-bottom: 2rem;
+  /* Shorthand (width, style, color)*/
+  outline: 8px dashed #909090;
+  outline-width: 8px;
+  outline-style: dashed;
+  outline-color: #90ee90;
+  /* Alejamiento del outline de la caja */
+  outline-offset: 40px;
+  outline-offset: -40px;
+}
+
+.box-outline p {
+  margin-top: 100px;
+  font-size: 40px;
+}

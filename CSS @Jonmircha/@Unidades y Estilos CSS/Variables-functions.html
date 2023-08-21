@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" id="#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables y Funciones CSS</title>
+
+    <!-- Links -->
+    <link rel="stylesheet" href="Assets/Variables-functions.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+  </head>
+  <body>
+    <h1>Variables y Funciones CSS</h1>
+    <p><a href="Index-2.html">👈 Volver al Index</a></p>
+    <hr />
+
+    <!-- Temario -->
+    <article>
+      <h2>Temario Variables y Funciones CSS</h2>
+      <ul>
+        <li><a href="#custom-var">Var()</a></li>
+        <li><a href="#url">Url()</a></li>
+        <li><a href="#calc">Cacl()</a></li>
+        <li><a href="#min-max">Min() & Max()</a></li>
+        <li><a href="#clamp">Clamp()</a></li>
+      </ul>
+    </article>
+    <hr />
+
+    <!-- -- Start Of The Course -- -->
+    <h2>Custom properties (Variables CSS)</h2>
+    <article id="custom-var">
+      <p>
+        Las variables se tiene que definir dentro de un selector, se comienzan con -- <br />
+        <b>Su sintaxis es: --nombre-cualquiera: valor; y atributo: var(--nombre-cualquiera)</b>
+        <br />
+        La variable en un elemento padre solo aplica a elementos hijos dentro de el
+        <br />
+        Si quieres que tu variables existan para todos los elementos en el html entonces
+        <b>colocar la variable en :root</b>
+        <br />
+        La pseudoclase :root hace referencias a la etiqueta html, pero esta posee
+        <b>mayor peso y especificidad</b>
+        <br />
+        En style se puede aplicar tambien variables CSS
+      </p>
+      <section class="custom-props-1">
+        <article class="custom-props-2" style="--border-color: #000">
+          <div class="custom-props-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis placeat nostrum eos
+            itaque. Vel optio impedit necessitatibus nulla sint saepe fuga tempore cumque cupiditate
+            ratione. Accusamus accusantium assumenda officiis cum.
+          </div>
+        </article>
+      </section>
+      <h3 class="title-props">Titulo de Ejemplo</h3>
+      <h3 class="title-props-2">Titulo de Ejemplo</h3>
+    </article>
+    <hr />
+    <h2>Funcion URL()</h2>
+    <article id="url">
+      <p>
+        La funcion url es como la ruta ("src") en la etiqueta "img", pero dirigido a cargar
+        contenido externos que contengan una url (hojas de estilos, archivos tipograficos, imagen)
+      </p>
+      <pre>
+        <code>
+          @import url(Units.css);
+        </code>
+      </pre>
+    </article>
+    <h2>Funcion Calc()</h2>
+    <article id="calc">
+      <p>
+        La funcion calc permite hacer funciones aritmeticas para intervenir en el codigo CSS <br />
+        Sirve mas que nada para maquetacion Web
+      </p>
+      <div class="ch-10">1234567890</div>
+    </article>
+    <h2>Min() & Max()</h2>
+    <article id="min-max">
+      <p>
+        Min() Toma los valores minimo y los plazma indefinidamente, los valores mayores van
+        decendiendo <br />
+        Max() Toma los valores maximos y los plazma indefinidamente, los valores menores van
+        decendiendo <br />
+        Pueden mezclarse varias unidades de medida para formar un ejemplo de responsive (No Siendo),
+        toma solo valores minimos o maximos para ello
+      </p>
+      <div class="min-max">Funciones min() & max()</div>
+    </article>
+    <h2>Clamp()</h2>
+    <article id="clamp">
+      <p>
+        Toma tres valores, Primero tamaño MINIMO, luego tamaño IDEAL y por ultimo tamaño MAXIMO
+        <br />
+        Un ejemplo de responsive pero con tres valores
+      </p>
+      <h2 class="clamp">EL valor clamp se puede utilizar como Responsive</h2>
+    </article>
+
+    <!-- -- Button -- -->
+    <a href="##" alt="img.png" class="button">
+      <i class="fi fi-sr-arrow-circle-up"></i>
+    </a>
+  </body>
+</html>

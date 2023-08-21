@@ -1,0 +1,137 @@
+:root {
+  --color-1: #073b4c;
+  --color-2: #ffd166;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: var(--color-1);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-2);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-1);
+}
+
+/*-- -- Button -- --*/
+/*-- -- Button -- --*/
+
+i {
+  font-size: 60px;
+  position: fixed;
+  top: 90%;
+  right: 2%;
+  scroll-behavior: smooth;
+}
+
+/*-- -- Star of the Code -- -- */
+/*-- -- Star of the Code -- -- */
+
+/*-- Var() --*/
+/*-- Var() --*/
+
+/* Colocar tus Variables aqui */
+/* Root posee mayor epecificidad le gana a html*/
+:root {
+  color: #006400;
+  color: #000;
+  --default-bg-color: #fff;
+}
+
+html {
+  color: #ffa07a;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.custom-props-1 {
+  --bg-props: #38d1a3;
+  --font-size-c: 32px;
+  background-color: var(--bg-props);
+}
+
+.custom-props-2 {
+  background-color: var(--default-bg-color);
+  background-color: var(--bg-props);
+  /* Propiedad Style */
+  border: medium solid var(--border-color);
+  padding: 1rem;
+}
+
+.custom-props-3 {
+  font-size: var(--font-size-c);
+  border: medium solid var(--border-color);
+}
+
+.title-props {
+  --bg-props-2: #38a1d1;
+  /* No Aplica porque no esta dentro del padre */
+  background-color: var(--bg-props);
+  background-color: var(--bg-props-2, #ffa500);
+}
+.title-props-2 {
+  --bg-props-2: #38a1d1;
+  background-color: var(--bg-props-2, #ffa500);
+  /* No Aplica porque no esta dentro del padre */
+  background-color: var(--bg-props);
+  background-color: var(--default-bg-color);
+}
+
+/*-- Url() --*/
+/*-- Url() --*/
+
+/* @import url(Units.css); */
+
+/*-- Calc() --*/
+/*-- Calc() --*/
+
+.ch-10 {
+  --padding-size: 2ch;
+  --numb-ch: 10ch;
+  background-color: var(--color-2);
+  width: 10ch;
+  font-size: 2rem;
+  /* Dimension de 14 caracteres */
+  padding: var(--padding-size);
+  width: calc(var(--numb-ch) + var(--padding-size) * 2);
+}
+
+/*-- Min() & Max() --*/
+/*-- Min() & Max() --*/
+
+/* Jerarquia de valores */
+
+/* Min() Toma los valores minimo y los plazma indefinidamente, los valores mayores van decendiendo */
+
+/* Max() Toma los valores maximos y los plazma indefinidamente, los valores menores van decendiendo */
+
+.min-max {
+  background-color: var(--color-1);
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  /* Aplica rem y vw */
+  width: min(300px, 20vw, 10rem);
+  height: max(200px, 25vw);
+}
+
+/*-- Clamp() --*/
+/*-- Clamp() --*/
+
+.clamp {
+  font-size: clamp(2rem, 1rem + 3vw, 3rem);
+}

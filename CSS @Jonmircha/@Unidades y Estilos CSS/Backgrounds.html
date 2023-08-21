@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" id="#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Button -->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <!-- Link -->
+    <link rel="stylesheet" href="Assets/Backgrounds.css" />
+    <title>Fondos en CSS</title>
+  </head>
+  <body>
+    <h1>Fondos en CSS</h1>
+    <p><a href="Index-2.html">👈 Volver al Index</a></p>
+    <hr />
+
+    <!-- Temario -->
+    <article>
+      <h2>Temario Fondos en CSS</h2>
+      <ul>
+        <li><a href="#bg-style">Estilos del Fondo</a></li>
+        <li><a href="#bg-style">Fondos Multiples</a></li>
+      </ul>
+    </article>
+    <hr />
+
+    <!-- -- Start Of The Course -- -->
+    <h2>Estilos del Fondo (Background)</h2>
+    <article id="bg-style">
+      <p>
+        Orden de las Cajas: <br />
+        <ol>
+          <li>Caja con bg-color</li>
+          <li>Caja con bg-image</li>
+          <li>Caja con bg-size</li>
+          <li>Caja con bg-repeat</li>
+          <li>Caja con bg-origin</li>
+          <li>Caja con bg-attachment</li>
+        </ol>
+      </p>
+      <div class="box bg-color">
+        <p>Bg-color</p>
+      </div>
+      <div class="box bg-image">
+        <p>Bg-image</p>
+      </div>
+      <p>
+        Bg-size: cover// cambia la imagen para que el contenedor a lo medido de lo posible muestre la imagen <br>
+        Bg-size: containt// cambia la imagen para que el contenedor muestre toda la imagen, asi se repita la imagen
+      </p>
+      <div class="box bg-size">
+        <p>Bg-size</p>
+      </div>
+      <div class="box bg-repeat">
+        <p>Bg-repeat</p>
+      </div>
+      <p>
+        Actua como la propiedad position: absolute, con sus top, left, right, bottom
+      </p>
+      <div class="box bg-position">
+        <p>Bg-position</p>
+      </div>
+      <p>
+        Define hasta dónde debe extenderse el fondo dentro del elemento. <br>
+        <b>border-box//</b> El fondo se extiende completamente por todo el elemento, incluso debajo del borde. (all)(Default) <br>
+        <b>padding-box//</b>El fondo solo se extiende hasta el borde del borde: incluye el relleno pero no el borde. (Padding) <br>
+        <b>Content-box//</b>El fondo solo se extiende hasta el borde del contenido : no incluye el relleno ni el borde. (width & height) <br>
+      </p>
+      <div class="box bg-clip">
+        <p>Bg-clip</p>
+      </div>
+      <div class="box bg-origin">
+        <p>Bg-origin</p>
+      </div>
+      <div class="box bg-attachment">
+        <p>Bg-attachment</p>
+      </div>
+    </article>
+    <h2>Fondos Multiples</h2>
+    <article>
+      <div class="box bg-multiple"></div>
+      <div class="box bg-art"></div>
+    </article>
+    
+    <!-- -- Button -- -->
+    <a href="##" alt="img.png" class="button">
+      <i class="fi fi-sr-arrow-circle-up"></i>
+    </a>
+  </body>
+</html>

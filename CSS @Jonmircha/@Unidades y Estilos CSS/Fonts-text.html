@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" id="#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estilos de Fuentes y Textos</title>
+
+    <!-- links -->
+    <!-- Google-Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google-Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <!-- CDN JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="Assets/Fonts-text.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  </head>
+
+  <body>
+    <h1>Estilos de Fuentes y Textos</h1>
+    <p><a href="Index-2.html">👈 Volver al Index</a></p>
+
+    <!-- Temario -->
+    <nav class="sticky">
+      <a href="##">
+        <h2 class="sticky-tittle">Temario Estilos de Fuentes y Textos CSS</h2>
+      </a>
+      <a href="#style-font">Estilos de Fuentes</a>
+      <a href="#face-display">Fuentes Externas</a>
+      <a href="#google">Google Fonts</a>
+      <a href="#icon">Iconos Vectoriales</a>
+    </nav>
+
+    <!-- -- Start Of The Course -- -->
+    <h2>Estilos de Fuentes Tipograficas</h2>
+    <article id="style-font">
+      <p>
+        los estilos de fuentes o familias tipograficas son el cojunto tipografias que podemos
+        aplicar (familias de fuentes- font-family) <br />
+        <b>font-size</b> tamaño de fuente de la letra <br />
+        <b>font-weight</b> peso de la tipografia (Negrita) <br />
+        <b>font-style</b> Estilo de la fuente tipografica <br />
+        <b>font-vatiant</b> Variantes de las fuentes (Mayusculas) <br />
+        <b>line-height</b> Interlineado
+      </p>
+      <br />
+      <p class="font">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat aut quia nesciunt delectus
+        inventore velit fugit. Omnis pariatur doloremque dicta sequi temporibus error quaerat et
+        adipisci, iste, asperiores, blanditiis commodi.
+      </p>
+    </article>
+    <hr />
+    <h2>Fuentes Externas @font-face & font-display</h2>
+    <article id="face-display">
+      <p>
+        <b>Fuentes para dispositivos//</b> example.ttf <br />
+        <b>Fuentes para la Web (Web Open Font Format)//</b> example.woff example.woff2
+      </p>
+      <p>
+        <b>@font face es una etiqueta y font-display es un atributo</b> <br />
+        <b>@font-face</b> Nos permite cargar y crear nuestra propia fuente de familia externa
+        (descargada) a nuestro proyecto <br />
+        <b>font-display</b> nos permite modificar como se vera dichas fuentes <br />
+        El formato para trabajar en fuentes en la web es <b>.woff & .woff2</b> <br />
+      </p>
+      <details>
+        <summary>Font-display:</summary>
+        <pre>
+          <code>
+            Como queremos cargar una fuente personalizada
+          
+            auto - permite que el navegador utilice el método predeterminado que suele ser block
+            block - oculta brevemente el texto hasta que la fuente haya sido descargada por completo
+            swap - indica al navegador que utilice la fuente alternativa para mostrar el texto hasta que la fuente personalizada se haya cargado por completo
+            fallback - es una mezcla de auto y swap
+            optional -ocultará el texto, luego lo cargará con la fuente alternativa y finalmente aplicará la fuente personalizada
+            
+            @font-face {
+              font-family: "Chalet";
+              src: url("../Fonts/Chalet.woff") format("woff");
+              /* url("../Fonts/Chalet.woff2") format("woff2"); */
+              font-display: swap;
+            }
+          </code>
+        </pre>
+      </details>
+      <p class="chalet">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et voluptate dolorem sunt corrupti
+        doloribus, ipsum impedit? Vel explicabo architecto perspiciatis, voluptates impedit porro.
+        Eligendi molestias ipsam ut aut facilis voluptatibus?
+      </p>
+      <p class="pecita">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat fuga quisquam velit quo, eum
+        earum reprehenderit a voluptates beatae, blanditiis, facere cumque? Rerum maxime eveniet,
+        voluptas commodi tempora quae neque?
+      </p>
+    </article>
+    <hr />
+    <h2>Google Fonts</h2>
+    <article id="google">
+      <p>
+        <b>Consejo//</b> Utilizar aproximadamente maximo fuentes tipograficas 2, por optimizacion de
+        pagina <br />
+      </p>
+      <p class="google">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe omnis natus numquam vel eos
+        officiis consequatur fugiat dolores. Obcaecati consectetur, accusamus vitae impedit maiores
+        voluptatibus laborum sed debitis earum doloribus?
+      </p>
+    </article>
+    <hr />
+    <h2>Estilos de Textos</h2>
+    <article id="style-text">
+      <p class="style-text">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam eos est voluptatibus sapiente,
+        laborum architecto animi quibusdam numquam sed similique sint eaque iste molestias
+        dignissimos, dicta, illo enim commodi accusamus.
+      </p>
+      <p class="text-overflow">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut reprehenderit quibusdam
+        dolorem minus, magnam neque quod suscipit, excepturi nam commodi aliquid placeat! Ab a
+        sapiente aut fugiat beatae qui quas.
+      </p>
+      <pre class="white-space">
+        #parent .selector ul li blockquote{
+          color: red;
+          font-size: 1rem;
+        }        
+      </pre>
+      <p class="word-spacing">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum totam officia cumque quam quo
+        iste eos. Placeat laborum, consequatur, natus impedit voluptas culpa atque fugit nesciunt
+        aut excepturi at? Dolor.
+      </p>
+    </article>
+    <hr />
+    <h2>Iconos Vectoriales</h2>
+    <article id="icon">
+      <p>
+        CDN = "Content Delivery Network"
+        <br />
+        Para colocar iconos siemre colocar el CDN(link) de la pagina en el head y colocar el i,span
+        o svg en el body
+      </p>
+      <h3>Material Icons</h3>
+      <span class="material-symbols-outlined delete"> delete </span>
+      <span class="material-symbols-outlined"> face </span>
+      <span class="material-symbols-outlined"> favorite </span>
+      <h3>Bootstrap-Icons</h3>
+      <i class="bi bi-apple"></i>
+      <i class="bi bi-youtube"></i>
+      <i class="bi bi-instagram"></i>
+      <h3>Font Awesome</h3>
+      <i class="fa-solid fa-hippo"></i>
+      <i class="fa-brands fa-discord"></i>
+      <i class="fa-regular fa-heart"></i>
+    </article>
+  </body>
+</html>

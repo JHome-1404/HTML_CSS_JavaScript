@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" id="#">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- -- Links -- -->
+    <!-- Button -->
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="Assets/Border-outlines.css" />
+    <title>Bordes y Outlines en CSS</title>
+  </head>
+  <body>
+    <h1>Bordes y Outlines CSS</h1>
+    <p><a href="Index-2.html">👈 Volver al Index</a></p>
+    <hr />
+
+    <!-- Temario -->
+    <article>
+      <h2>Temario Bordes y Outlines en CSS</h2>
+      <ul>
+        <li><a href="#radius">Border-radius()</a></li>
+        <li><a href="#outline">Outline()</a></li>
+      </ul>
+    </article>
+    <hr />
+
+    <!-- -- Start Of The Course -- -->
+		<h2>Propiedad Border-radius()</h2>
+    <article id="radius">
+      <p>Se puede cualquier valor de unidad excepto vw, ch, ex </p>
+      <pre>
+        Valor 1 = All
+
+        Valor 1 = top-left, bottom-right
+        Valor 2 = top-right, bottom-left
+
+        Valor 1 = top-left
+        Valor 2 = top-right, bottom-left
+        Valor 3 = bottom-right
+        
+        Valor 1 = top-left
+        Valor 2 = top-right
+        Valor 3 = bottom-right
+        Valor 4 = bottom-left
+      </pre>
+      <div class="border-radius"><p>1 Valor</p></div>
+      <div class="container">
+        <div class="border-radius-2 example"><p>2 Valores</p></div>
+        <div class="border-radius-3 example"><p>3 Valores</p></div>
+        <div class="border-radius-4 example"><p>4 Valores</p></div>
+      </div>
+      <p>
+        El Borde eliptico se aplica como 2 radios en un circulo eliptico <br />
+        Su Sintaxis es asi:
+        <pre>
+          .border-radius-e {
+            /* 1 Valor */
+            border-radius: 2rem / 4rem;
+            border-radius: 10% / 50%;
+          }
+          /* 2 Valores */
+          .border-radius-e-2 {
+            border-radius: 50% 20% / 10% 40%;
+          }
+        </pre>
+      </p>
+      <div class="border-radius-e eliptico"><p>Borde Eliptico</p></div>
+      <div class="border-radius-e-2 eliptico"><p>Borde Eliptico</p></div>
+      <img src="https://www.webdesignerdepot.com/cdn-origin/uploads/2018/10/004-3.jpg" alt="Eliptic.png" class="img">
+    </article>
+    <hr />
+		<h2>Propiedad Outline</h2>
+    <article id="outline">
+			<p>
+        Es un borde externo que NO es borde y que se puede expandir o contraer sin afectar las demas capas o cajas <br>
+        <b>REFERECIA//</b> Capas en IbistPaint x <br>
+        Los elementos input contienen en si un outline predeterminado en el :focus
+      </p>
+      <div class="box-outline"><p>Outline</p></div>
+      <div style="text-align: center;">
+        <input type="text ">
+      </div>
+    </article>
+
+
+    <!-- -- Button -- -->
+    <a href="##" alt="img.png" class="button">
+      <i class="fi fi-sr-arrow-circle-up"></i>
+    </a>
+  </body>
+</html>
