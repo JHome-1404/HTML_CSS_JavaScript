@@ -259,7 +259,7 @@ console.log(Math.abs(-7.8));
 // ? Redondear
 console.log(Math.ceil(7.3));
 console.log(Math.floor(7.2));
-// El mejor
+// ? El mejor
 console.log(Math.round(7.2));
 // ? Raiz Cuadrada
 console.log(Math.sqrt(81));

@@ -130,7 +130,8 @@ const $html = document.documentElement;
 $html.style.setProperty("--bg-secundary", "red");
 
 let varPrimaryColor = getComputedStyle($html).getPropertyValue("--bg-primary");
-let varSecundaryColor = getComputedStyle($html).getPropertyValue("--bg-secundary");
+let varSecundaryColor =
+  getComputedStyle($html).getPropertyValue("--bg-secundary");
 
 console.log(varPrimaryColor, varSecundaryColor);
 
@@ -264,7 +265,15 @@ continentes.forEach((e) => {
 // # Fragmentos
 // ? mejora el rendimiento de inserciones en el DOM con solo una insercion (uso de NODOS)(Objeto?)
 
-const diasSemana = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"];
+const diasSemana = [
+  "Lunes",
+  "Martes",
+  "Miercoles",
+  "Jueves",
+  "Viernes",
+  "Sabado",
+  "Domingo",
+];
 const $ul3 = document.createElement("ul");
 
 document.write(`<h2>Dias de la Semana</h2>`);
@@ -418,7 +427,9 @@ $eventRemove.addEventListener("dblclick", removerEvent);
 const $divEventos = document.querySelectorAll(".eventos-flujo div");
 
 function flujoEventos(e) {
-  console.log(`Hola te saluda ${this.className}, el click lo origino ${e.target.className}`);
+  console.log(
+    `Hola te saluda ${this.className}, el click lo origino ${e.target.className}`
+  );
   e.stopPropagation();
 }
 
@@ -471,7 +482,9 @@ $linkEventos.addEventListener("click", (e) => {
 const $linkEventos2 = document.querySelector(".eventos-flujo-2 a");
 
 function flujoEventos2(e) {
-  console.log(`Hola Developer te saluda ${this.className}, el click lo origino ${e.target.className}`);
+  console.log(
+    `Hola Developer te saluda ${this.className}, el click lo origino ${e.target.className}`
+  );
 }
 
 // $ MEJOR FORMA (OPTIMA)
@@ -487,6 +500,7 @@ function flujoEventos2(e) {
 // });
 
 // ! Para optimizar los eventos en casos extensos sin necesidad de .foreach() se suele colocar el evento en el selector padre superior con condicionales en sus eventos hijos (@falconmaster)
+// ? Colocar matches o tagname o investigar otro metodo
 
 // ## BOM
 // # PROPIEDADES Y EVENTOS
@@ -595,3 +609,12 @@ console.clear();
 // ?? NAVEGADOR
 console.log("*** Objeto Navigator ***");
 console.log(navigator);
+console.log(navigator.connection);
+console.log(navigator.mediaDevices);
+// ? Juego del Dinosaurio
+console.log(navigator.onLine);
+// ? API (Instalador de aplicacion)
+// console.log(navigator.serviceWorker);
+console.log(navigator.storage);
+console.log(navigator.usb);
+console.log(navigator.userAgent);

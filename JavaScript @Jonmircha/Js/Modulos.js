@@ -23,3 +23,5 @@ saludo.hi(usuario);
 // $ Default/ import exportacio.default,{"exportaciones"} from "lugar.de.exportacion"
 
 // $ exportacion as exportacion / cambia el nombre
+
+// ? Cuando creas una importacion entre dos archivos js, se pueden traer, actualizar o eliminar datos o variables una de la ora
