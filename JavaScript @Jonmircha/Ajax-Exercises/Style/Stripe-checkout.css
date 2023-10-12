@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+  font-family: "Poppins", arial;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: "Poppins", arial;
+  font-size: 16px;
+  padding: 40px 80px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  gap: 40px;
+}
+
+.burguer {
+  background-color: #eeeeee;
+  display: flex;
+  align-items: stretch;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-direction: column;
+  cursor: pointer;
+  filter: grayscale(20%);
+  transition: all 0.5s ease;
+}
+
+.burguer > * {
+  pointer-events: none;
+}
+
+.burguer:hover {
+  transform: scale(1.02);
+  filter: grayscale(0%);
+  box-shadow: 0px 0px 10px 0px #666;
+}
+
+.burguer .img {
+  background-color: green;
+  height: 25em;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.burguer figcaption {
+  margin: 20px;
+  font-size: 1.2rem;
+}
+
+.burguer .price {
+  font-weight: bold;
+  font-size: 1.4rem;
+}

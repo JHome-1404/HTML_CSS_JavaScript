@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Envio de Formulario con Fetch y PHP</title>
+    <link rel="stylesheet" href="Style/Form-ajax.css" />
+  </head>
+  <body>
+    <h2>Envio de Formulario con Fetch y PHP</h2>
+    <form class="contact-form">
+      <input
+        type="text"
+        name="name"
+        placeholder="Escribe tu Nombre..."
+        title="Nombre solo acepta letras y espacios en blanco"
+        pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Escribe tu Email..."
+        title="Email Invalido"
+        pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
+        required
+      />
+      <input
+        type="text"
+        name="subject"
+        placeholder="Asunto..."
+        title="El Asunto es requerido"
+        required
+      />
+      <textarea
+        name="comments"
+        placeholder="Escribe tus Comentarios..."
+        title="Tu comentario no debe exceder los 255 catacteres"
+        data-pattern="^.{1,255}$"
+        required
+      ></textarea>
+      <button type="submit">Enviar</button>
+      <div class="contact-form-loader none">
+        <img src="Assets/oval.svg" alt="Cargando" />
+      </div>
+      <div class="contact-form-response none">
+        <p>Los datos han sido enviados</p>
+      </div>
+      <input
+        type="hidden"
+        name="_next"
+        value="http://127.0.0.1:5500/JavaScript%20@Jonmircha/Html/Dom/Dom-Ejercicios.html"
+      />
+      <input type="hidden" name="_captcha" value="false" />
+      <script src="Js/Form-ajax-php.js"></script>
+    </form>
+  </body>
+</html>

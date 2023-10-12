@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+  font-family: "Poppins", arial;
+}
+
+:root {
+  --main-color: #f7df1e;
+  --second-color: #222;
+}
+
+body {
+  background-color: #fff;
+  color: var(--second-color);
+  font-family: "Poppins", arial;
+  font-size: 16px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form {
+  --form-valid: #008000;
+  --form-invalid: #ff0000;
+  width: 40%;
+  text-align: center;
+}
+
+.contact-form > * {
+  padding: 0.5em;
+  margin: 1rem auto;
+  display: block;
+  width: 100%;
+  outline: none;
+}
+
+.contact-form textarea {
+  height: 15em;
+  resize: none;
+}
+
+.contact-form-response {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.contact-form button[type="submit"] {
+  width: 50%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form *::placeholder {
+  color: var(--second-color);
+}
+
+.contact-form *[required]:valid {
+  border: thin solid var(--form-valid);
+}
+
+.contact-form *[required]:invalid {
+  border: thin solid var(--form-invalid);
+}
+
+.contact-form-loader img {
+  width: 4em;
+}
+
+.contact-form-error {
+  background-color: var(--form-invalid);
+  color: #fff;
+  margin-top: -1rem;
+  font-size: 80%;
+  transition: all 800ms ease;
+}
+
+.contact-form-error.is-active {
+  display: block;
+  animation: show-message 1s 1 normal 0s ease both;
+}
+
+.none {
+  display: none;
+}
+
+@keyframes show-message {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .contact-form {
+    width: 80%;
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nombre": "User1",
+      "edad": 18,
+      "email": "user1email@example.com",
+      "telefono": 3229410538
+    },
+    {
+      "id": 2,
+      "nombre": "User2",
+      "edad": 20,
+      "email": "user2email@example.com",
+      "telefono": 3228506843
+    },
+    {
+      "id": 3,
+      "nombre": "User3",
+      "edad": 16,
+      "email": "user3email@example.com",
+      "telefono": 3228519587
+    },
+    {
+      "id": 4,
+      "nombre": "User4",
+      "edad": 25,
+      "email": "user4email@example.com",
+      "telefono": 3228591759
+    },
+    {
+      "id": 5,
+      "nombre": "User5",
+      "edad": 18,
+      "email": "user5email@example.com",
+      "telefono": 3227519478
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, sapiente dolores at quia facilis nostrum nulla"
+    },
+    {
+      "id": 2,
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, sapiente dolores at quia facilis nostrum nulla"
+    },
+    {
+      "id": 3,
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, sapiente dolores at quia facilis nostrum nulla"
+    },
+    {
+      "id": 4,
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, sapiente dolores at quia facilis nostrum nulla"
+    },
+    {
+      "id": 5,
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, sapiente dolores at quia facilis nostrum nulla"
+    }
+  ]
+}
