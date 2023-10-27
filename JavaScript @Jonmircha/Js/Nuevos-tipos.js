@@ -43,7 +43,21 @@ console.clear();
 
 // # SETS
 // ? Eliminar los elementos repetidos en un arreglo, es como un arreglo pero no es arreglo
-const set = new Set([1, 3, 3, 4, 5, true, false, true, {}, {}, "hola", "HOLA", "hola"]);
+const set = new Set([
+  1,
+  3,
+  3,
+  4,
+  5,
+  true,
+  false,
+  true,
+  {},
+  {},
+  "hola",
+  "HOLA",
+  "hola",
+]);
 console.log(set);
 console.log(set.size);
 
@@ -180,6 +194,18 @@ function* generator() {
 //   console.log(y);
 // }
 
+const countThings = function* () {
+  const numeros = [1, 2, 3];
+  yield numeros[0];
+  yield numeros[1];
+  yield numeros[2];
+};
+
+const generador = countThings();
+console.log(generador.next());
+console.log(generador.next());
+console.log(generador.next());
+
 // ! Borrando Consola
 console.clear();
 
@@ -197,7 +223,9 @@ const manejador = {
   set(obj, prop, valor) {
     // $ Evaluar en la lista del objeto exista la propiedad
     if (Object.keys(obj).indexOf(prop) === -1) {
-      return console.error(`La propiedad ${prop} NO existe en el objeto persona`);
+      return console.error(
+        `La propiedad ${prop} NO existe en el objeto persona`
+      );
     }
     obj[prop] = valor;
   },
