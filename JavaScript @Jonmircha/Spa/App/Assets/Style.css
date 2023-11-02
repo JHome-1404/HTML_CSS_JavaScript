@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+  font-family: "Poppins", arial;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+a {
+  color: #01579b;
+  transition: color 0.5s ease;
+}
+
+a:hover {
+  color: #00b0ff;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+/*-- JS --*/
+
+#root {
+  margin-top: 12em;
+}
+
+.loader {
+  margin: 1rem auto;
+  display: block;
+  width: 4em;
+  height: 4em;
+}
+
+.error {
+  background-color: #dc3545;
+  color: #fff;
+  width: 100%;
+  padding: 1em;
+  font-size: 1.2rem;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+}
+
+.search-form {
+  margin: auto;
+  text-align: center;
+}
+
+.search-form input {
+  display: block;
+  margin: auto;
+  padding: 0.25em;
+  font-size: 1em;
+  border-radius: 0.25em;
+  border: solid 2px #01579b;
+}
+
+.search-form input:focus {
+  outline: solid 2px #00b0ff;
+  border: solid 2px transparent;
+}
+
+.header {
+  background-color: #e0e0e0;
+  width: 100%;
+  padding: 2px;
+  position: fixed;
+  top: 0;
+  text-align: center;
+}
+
+.header > * {
+  margin: 1rem auto;
+}
+
+.post-card {
+  background-color: #bdbdbd;
+  width: 80%;
+  padding: 1rem;
+  margin: 1rem auto;
+}
+
+.post-card p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.grid-fluid {
+  margin: 1rem auto;
+  max-width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+}
+
+.post-page {
+  background-color: #bdbdbd;
+  margin: 0px auto;
+  padding: 2.5rem;
+  width: 90%;
+}
+
+.post-page img,
+.post-page audio,
+.post-page figure,
+.post-page iframe,
+.post-page video {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: auto;
+}
+
+.post-page > aside {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.post-page > hr {
+  border: solid 1.5px #fff;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.post-page p {
+  margin: 1rem auto;
+}

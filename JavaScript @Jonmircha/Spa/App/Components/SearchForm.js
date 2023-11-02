@@ -1,0 +1,11 @@
+export const searchForm = () => {
+  const form = document.createElement("form");
+  const input = document.createElement("input");
+  form.classList.add("search-form");
+  input.name = "search";
+  input.type = "search";
+  input.placeholder = "Buscar...";
+
+  form.appendChild(input);
+  return form;
+};
