@@ -79,7 +79,7 @@ h2 {
 }
 
 .header {
-  background-color: #e0e0e0;
+  background-color: #ffffffe9;
   width: 100%;
   padding: 2px;
   position: fixed;
@@ -146,4 +146,19 @@ h2 {
 
 .post-page p {
   margin: 1rem auto;
+}
+
+.grid-fluid02 {
+  margin: 1rem auto;
+  max-width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+}
+
+.grid-fluid02 .post-card {
+  padding: 2rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
 }
