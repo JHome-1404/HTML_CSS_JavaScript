@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Componentes Con Estado</title>
+  </head>
+  <body>
+    <h1>Componentes Con Estado</h1>
+    <form id="todo-form" autocomplete="off">
+      <input type="text" id="todo-item" placeholder="Tarea por hacer..." />
+      <button type="submit">Agregar</button>
+      <h2>Lista de Tareas</h2>
+      <ul id="todo-list"></ul>
+    </form>
+    <script>
+      // El State (Estado)
+      const state = {
+        todoList: [],
+      };
+
+      // Template UI
+      const template = () => {
+        if (template.data.todoList.length < 1)
+          return `<p>Lista sin Tareas por Hacer</p>`;
+        let todos = template.data.todoList
+          .map((item) => `<li>${item}</li>`)
+          .join("");
+        return todos;
+      };
+
+      // Agregar State al Template (State Local)
+      template.data = {
+        todoList: [],
+      };
+
+      // Render UI
+      const render = () => {
+        console.log(template.data);
+        console.log(state);
+        const list = document.getElementById("todo-list");
+        if (!list) return;
+        list.innerHTML = template();
+      };
+
+      // Actualizar el State de forma Reactiva
+      const setState = (obj) => {
+        for (const key in obj) {
+          if (template.data.hasOwnProperty(key)) {
+            template.data[key] = obj[key];
+          }
+        }
+        render();
+      };
+
+      // Obtener una copia Inmutable del State
+      const getState = () => {
+        return JSON.parse(JSON.stringify(template.data));
+      };
+
+      // Estableciendo Valores Default
+      setState({
+        todoList: ["Tarea1", "Tarea2", "Tarea3"],
+        nombre: "Home",
+      });
+
+      // Mutable
+      // const items2 = state;
+      // items2.todoList.push("Tarea 4");
+
+      // Inmutable
+      // const items = getState();
+      // items.todoList.push("Tarea 4");
+
+      document.addEventListener("DOMContentLoaded", render);
+
+      document.addEventListener("submit", (e) => {
+        if (!e.target.matches("#todo-form")) return false;
+        e.preventDefault();
+
+        const item = document.getElementById("todo-item");
+        if (!item) return;
+        const data = getState();
+        data.todoList.push(item.value);
+        setState({ todoList: data.todoList });
+
+        item.value = "";
+        item.focus();
+      });
+    </script>
+  </body>
+</html>

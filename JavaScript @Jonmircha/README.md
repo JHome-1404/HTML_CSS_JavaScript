@@ -4,6 +4,8 @@ Aqui Encontraras toda mi recorrido de JavaScript en el Curso de **[@Jonmircha](h
 
 Tener en cuenta que los siguientes codigos se encuentra formateados con prettier por si encuentras codigo de manera desordenada o ilogica
 
+En el repositorio del curso de **@Jonmircha** encontrar el orden de los documentos para seguir la guia
+
 ![Js-Image](https://www.wikitechy.com/technology/wp-content/uploads/2020/08/javascript-drawbacks.jpg)
 
 ## Enlaces

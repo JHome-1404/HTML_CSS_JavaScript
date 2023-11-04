@@ -60,3 +60,4 @@ export const router = async () => {
 };
 
 // ? Tener en cuenta el flujo de bloqueo de los await para los loaders y siempre guardar un enlace en el enrutamiento
+// ? OPINION: Para una mejor comodidad en el enrutamiendo usar el pathname en lugar de Hash

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reactividad del Estado</title>
+  </head>
+  <body>
+    <h1>Reactividad del Estado</h1>
+    <form id="todo-form" autocomplete="off">
+      <input type="text" id="todo-item" placeholder="Tarea por hacer..." />
+      <button type="submit">Agregar</button>
+      <h2>Lista de Tareas</h2>
+      <ul id="todo-list"></ul>
+    </form>
+    <script>
+      // El State (Estado)
+      const state = {
+        todoList: [],
+      };
+
+      // Template UI
+      const template = () => {
+        if (state.todoList.length < 1)
+          return `<p>Lista sin Tareas por Hacer</p>`;
+        let todos = state.todoList.map((item) => `<li>${item}</li>`).join("");
+        return todos;
+      };
+
+      // Render UI
+      const render = () => {
+        console.log(state.todoList);
+        const list = document.getElementById("todo-list");
+        if (!list) return;
+        list.innerHTML = template();
+      };
+
+      // Actualizar el State de forma Reactiva
+      const setState = (obj) => {
+        for (const key in obj) {
+          if (state.hasOwnProperty(key)) {
+            state[key] = obj[key];
+          }
+        }
+        render();
+      };
+
+      // Estableciendo Valores Default
+      setState({
+        todoList: ["Tarea1", "Tarea2", "Tarea3"],
+      });
+
+      document.addEventListener("DOMContentLoaded", render);
+
+      document.addEventListener("submit", (e) => {
+        if (!e.target.matches("#todo-form")) return false;
+        e.preventDefault();
+
+        // Estado Mutable : permite modificar el estado directamente creando una copia del objeto y agregando otro elemento
+        const item = document.getElementById("todo-item");
+        if (!item) return;
+        state.todoList.push(item.value);
+        render();
+
+        // Limpiar
+        item.value = "";
+        item.focus();
+      });
+      // Estados Mutables e Inmutables
+    </script>
+  </body>
+</html>

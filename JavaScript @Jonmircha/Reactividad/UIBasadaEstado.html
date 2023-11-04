@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UI Basada en el Estado</title>
+  </head>
+  <body>
+    <h1>UI Basada en el Estado</h1>
+    <form id="todo-form" autocomplete="off">
+      <input type="text" id="todo-item" placeholder="Tarea por hacer..." />
+      <button type="submit">Agregar</button>
+      <h2>Lista de Tareas</h2>
+      <ul id="todo-list"></ul>
+    </form>
+    <script>
+      // El State (Estado)
+      const state = {
+        todoList: [],
+      };
+
+      // Template UI
+      const template = () => {
+        if (state.todoList.length < 1)
+          return `<p>Lista sin Tareas por Hacer</p>`;
+        let todos = state.todoList.map((item) => `<li>${item}</li>`).join("");
+        return todos;
+      };
+
+      // Render UI
+      const render = () => {
+        console.log(state.todoList);
+        const list = document.getElementById("todo-list");
+        if (!list) return;
+        list.innerHTML = template();
+      };
+
+      document.addEventListener("DOMContentLoaded", render);
+
+      document.addEventListener("submit", (e) => {
+        if (!e.target.matches("#todo-form")) return false;
+        e.preventDefault();
+
+        // Actualizar State y Ui
+        const item = document.getElementById("todo-item");
+        if (!item) return;
+        state.todoList.push(item.value);
+        render();
+
+        // Limpiar
+        item.value = "";
+        item.focus();
+      });
+      // No es muy buena practica manipular el estado directamente
+    </script>
+  </body>
+</html>
